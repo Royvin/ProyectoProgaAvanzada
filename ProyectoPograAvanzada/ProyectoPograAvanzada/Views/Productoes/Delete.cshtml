@@ -4,45 +4,42 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2 class="text-center text-danger">Eliminar Producto</h2>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Producto</h4>
+<h3 class="text-center text-warning">¿Estás seguro de que deseas eliminar este producto?</h3>
+
+<div class="container p-4" style="background-color: #f5f5dc; border-radius: 10px;">
+    <h4 class="text-success">Detalles del Producto</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
+    <dl class="row">
+        <dt class="col-sm-4 fw-bold text-success">
             @Html.DisplayNameFor(model => model.Nombre)
         </dt>
-
-        <dd>
+        <dd class="col-sm-8">
             @Html.DisplayFor(model => model.Nombre)
         </dd>
 
-        <dt>
+        <dt class="col-sm-4 fw-bold text-success">
             @Html.DisplayNameFor(model => model.Precio)
         </dt>
-
-        <dd>
+        <dd class="col-sm-8">
             @Html.DisplayFor(model => model.Precio)
         </dd>
 
-        <dt>
+        <dt class="col-sm-4 fw-bold text-success">
             @Html.DisplayNameFor(model => model.CantidadaDisponible)
         </dt>
-
-        <dd>
+        <dd class="col-sm-8">
             @Html.DisplayFor(model => model.CantidadaDisponible)
         </dd>
-
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+        <div class="text-center mt-3">
+            <input type="submit" value="Eliminar" class="btn btn-danger" />
+            @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-outline-success" })
         </div>
     }
 </div>
