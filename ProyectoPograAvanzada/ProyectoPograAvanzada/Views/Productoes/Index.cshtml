@@ -5,6 +5,13 @@
 }
 
 <h2 class="text-center text-success">Lista de Productos</h2>
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["Message"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
 
 <div class="text-center mb-3">
     @Html.ActionLink("Crear Nuevo", "Create", null, new { @class = "btn btn-success" })
@@ -31,7 +38,7 @@
                         @Html.ActionLink("Editar", "Edit", new { id = item.IdProducto }, new { @class = "btn btn-warning btn-sm" })
                         @Html.ActionLink("Detalles", "Details", new { id = item.IdProducto }, new { @class = "btn btn-info btn-sm" })
                         @Html.ActionLink("Eliminar", "Delete", new { id = item.IdProducto }, new { @class = "btn btn-danger btn-sm" })
-                        @Html.ActionLink("Añadir al Carrito", "AddToCart", new { id = item.IdProducto }, new { @class = "btn btn-primary btn-sm" })
+                        @Html.ActionLink("Añadir al Carrito", "AnadirCarrito", "Carrito", new { id = item.IdProducto }, new { @class = "btn btn-primary btn-sm" })
                     </td>
                 </tr>
             }

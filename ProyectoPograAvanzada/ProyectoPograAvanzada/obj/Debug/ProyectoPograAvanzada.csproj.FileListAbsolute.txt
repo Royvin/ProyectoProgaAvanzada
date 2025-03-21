@@ -100,3 +100,5 @@ D:\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPog
 D:\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.pdb
 D:\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.ProductoYNetIdentityTables.resources
 D:\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.csproj.GenerateResource.cache
+D:\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.Carrito.resources
+D:\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.AjustesCarrito.resources

@@ -32,6 +32,11 @@ namespace ProyectoPograAvanzada.Models
             return new ApplicationDbContext();
         }
         public DbSet<Producto> Productos { get; set; }
+        public DbSet<CarritoItem> CarritoItems { get; set; }
+
+        public DbSet<Carrito> Carritos { get; set; }
+
+
 
 
     }

@@ -162,6 +162,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CarritoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductoesController.cs" />
@@ -172,8 +173,17 @@
     <Compile Include="Migrations\202503202258524_ProductoYNetIdentityTables.Designer.cs">
       <DependentUpon>202503202258524_ProductoYNetIdentityTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202503211801045_Carrito.cs" />
+    <Compile Include="Migrations\202503211801045_Carrito.Designer.cs">
+      <DependentUpon>202503211801045_Carrito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202503211822556_AjustesCarrito.cs" />
+    <Compile Include="Migrations\202503211822556_AjustesCarrito.Designer.cs">
+      <DependentUpon>202503211822556_AjustesCarrito.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Carrito.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Producto.cs" />
@@ -256,6 +266,7 @@
     <Content Include="Views\Productoes\Details.cshtml" />
     <Content Include="Views\Productoes\Edit.cshtml" />
     <Content Include="Views\Productoes\Index.cshtml" />
+    <Content Include="Views\Carrito\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -290,6 +301,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202503202258524_ProductoYNetIdentityTables.resx">
       <DependentUpon>202503202258524_ProductoYNetIdentityTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503211801045_Carrito.resx">
+      <DependentUpon>202503211801045_Carrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503211822556_AjustesCarrito.resx">
+      <DependentUpon>202503211822556_AjustesCarrito.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
