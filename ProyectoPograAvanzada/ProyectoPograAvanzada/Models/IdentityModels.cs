@@ -1,8 +1,10 @@
 ﻿using System.Data.Entity;
+using System.Reflection.Emit;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+
 
 namespace ProyectoPograAvanzada.Models
 {
@@ -21,7 +23,7 @@ namespace ProyectoPograAvanzada.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("ProyectoDbConnection", throwIfV1Schema: false)
         {
         }
 
@@ -29,5 +31,8 @@ namespace ProyectoPograAvanzada.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Producto> Productos { get; set; }
+
+
     }
 }

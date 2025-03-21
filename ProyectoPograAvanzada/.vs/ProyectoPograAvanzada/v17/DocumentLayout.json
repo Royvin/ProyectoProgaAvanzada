@@ -1,12 +1,173 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\views\\productoes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\views\\productoes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\controllers\\productoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\controllers\\productoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\models\\identitymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\models\\identitymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\migrations\\202503202258524_productoynetidentitytables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\migrations\\202503202258524_productoynetidentitytables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Productoes\\Create.cshtml",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Views\\Productoes\\Create.cshtml",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Productoes\\Create.cshtml",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Views\\Productoes\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-21T00:33:00.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductoesController.cs",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Controllers\\ProductoesController.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Controllers\\ProductoesController.cs",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Controllers\\ProductoesController.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Controllers\\ProductoesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T00:32:51.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "packages.config",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\packages.config",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\packages.config",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\packages.config",
+              "RelativeToolTip": "ProyectoPograAvanzada\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-03-20T23:00:12.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "202503202258524_ProductoYNetIdentityTables.cs",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Migrations\\202503202258524_ProductoYNetIdentityTables.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Migrations\\202503202258524_ProductoYNetIdentityTables.cs",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Migrations\\202503202258524_ProductoYNetIdentityTables.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Migrations\\202503202258524_ProductoYNetIdentityTables.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAgwBMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T22:59:04.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Migrations\\Configuration.cs",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Migrations\\Configuration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T22:58:16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IdentityModels.cs",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\IdentityModels.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Models\\IdentityModels.cs",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\IdentityModels.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Models\\IdentityModels.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T22:27:05.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Web.config",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Web.config",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Web.config",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAB9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-03-20T22:26:57.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AccountViewModels.cs",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\AccountViewModels.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Models\\AccountViewModels.cs",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\AccountViewModels.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Models\\AccountViewModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T22:13:16.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Models\\Producto.cs",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\Producto.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Models\\Producto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T22:13:03.815Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
