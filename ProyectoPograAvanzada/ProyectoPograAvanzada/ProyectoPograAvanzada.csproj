@@ -188,6 +188,7 @@
     <Compile Include="Migrations\202503271748187_PedidosYDetallesPedido.cs" />
     <Compile Include="Migrations\202503271748187_PedidosYDetallesPedido.Designer.cs">
       <DependentUpon>202503271748187_PedidosYDetallesPedido.cs</DependentUpon>
+	</Compile>
     <Compile Include="Migrations\202503260700383_RegistroActualizado.cs" />
     <Compile Include="Migrations\202503260700383_RegistroActualizado.Designer.cs">
       <DependentUpon>202503260700383_RegistroActualizado.cs</DependentUpon>
@@ -350,6 +351,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202503271748187_PedidosYDetallesPedido.resx">
       <DependentUpon>202503271748187_PedidosYDetallesPedido.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="Migrations\202503260700383_RegistroActualizado.resx">
       <DependentUpon>202503260700383_RegistroActualizado.cs</DependentUpon>
     </EmbeddedResource>

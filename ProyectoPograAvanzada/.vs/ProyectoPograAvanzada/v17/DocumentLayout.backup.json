@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Personal\\Documents\\University\\Progra Avanzada\\Proyecto\\Code\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\views\\pedidos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\views\\pedidos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\views\\detallepedidos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\views\\detallepedidos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
       "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|c:\\users\\personal\\documents\\university\\progra avanzada\\proyecto\\code\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\controllers\\rese\u00F1ascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\controllers\\rese\u00F1ascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -41,20 +41,21 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Pedidos\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Views\\Pedidos\\Index.cshtml",
-              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Pedidos\\Index.cshtml",
-              "RelativeToolTip": "ProyectoPograAvanzada\\Views\\Pedidos\\Index.cshtml",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\DetallePedidos\\Create.cshtml",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Views\\DetallePedidos\\Create.cshtml",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\DetallePedidos\\Create.cshtml",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Views\\DetallePedidos\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-27T17:53:44.111Z",
+              "WhenOpened": "2025-03-27T17:59:55.808Z",
+              "EditorCaption": ""
               "Title": "Rese\u00F1asController.cs",
               "DocumentMoniker": "C:\\Users\\Personal\\Documents\\University\\Progra Avanzada\\Proyecto\\Code\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Controllers\\Rese\u00F1asController.cs",
               "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Controllers\\Rese\u00F1asController.cs",
               "ToolTip": "C:\\Users\\Personal\\Documents\\University\\Progra Avanzada\\Proyecto\\Code\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Controllers\\Rese\u00F1asController.cs",
               "RelativeToolTip": "ProyectoPograAvanzada\\Controllers\\Rese\u00F1asController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T08:10:41.992Z",
               "EditorCaption": ""
