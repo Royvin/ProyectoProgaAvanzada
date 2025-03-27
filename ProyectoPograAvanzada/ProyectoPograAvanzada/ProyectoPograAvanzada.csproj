@@ -172,6 +172,10 @@
     <Compile Include="Migrations\202503202258524_ProductoYNetIdentityTables.Designer.cs">
       <DependentUpon>202503202258524_ProductoYNetIdentityTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202503260700383_RegistroActualizado.cs" />
+    <Compile Include="Migrations\202503260700383_RegistroActualizado.Designer.cs">
+      <DependentUpon>202503260700383_RegistroActualizado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -290,6 +294,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202503202258524_ProductoYNetIdentityTables.resx">
       <DependentUpon>202503202258524_ProductoYNetIdentityTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503260700383_RegistroActualizado.resx">
+      <DependentUpon>202503260700383_RegistroActualizado.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
