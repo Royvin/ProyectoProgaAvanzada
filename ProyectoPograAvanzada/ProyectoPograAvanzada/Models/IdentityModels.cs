@@ -37,6 +37,8 @@ namespace ProyectoPograAvanzada.Models
         public DbSet<Carrito> Carritos { get; set; }
 
 
+        public DbSet<Pedidos> Pedidos { get; set; }
+        public DbSet<DetallePedidos> DetallePedidos { get; set; }
 
 
     }
