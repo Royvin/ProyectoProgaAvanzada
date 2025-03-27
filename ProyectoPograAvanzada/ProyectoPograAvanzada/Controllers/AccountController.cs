@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ProyectoPograAvanzada.Models;
@@ -153,8 +154,6 @@ namespace ProyectoPograAvanzada.Controllers
             return View();
         }
 
-        //
-        // POST: /Account/Register
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -162,46 +161,54 @@ namespace ProyectoPograAvanzada.Controllers
         {
             if (ModelState.IsValid)
             {
-                
-                    var user = new ApplicationUser {
+                var user = new ApplicationUser
+                {
                     UserName = model.Email,
                     Email = model.Email,
                     NombreCompleto = model.NombreCompleto,
                     Carrera = model.Carrera
-
-
-
                 };
 
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    using (var context = new ApplicationDbContext())
+                    {
+                        var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+
+                        // **Verificar si el rol "Admin" existe, si no lo crea**
+                        if (!roleManager.RoleExists("Admin"))
+                        {
+                            var role = new IdentityRole("Admin");
+                            await roleManager.CreateAsync(role);
+                        }
+
+                        // **Obtener el número de usuarios en la base de datos**
+                        int userCount = UserManager.Users.Count();
+
+                        // **Si es el primer usuario, asignarlo como Admin**
+                        if (userCount == 1)
+                        {
+                            var roleAssignResult = await UserManager.AddToRoleAsync(user.Id, "Admin");
+                            if (!roleAssignResult.Succeeded)
+                            {
+                                AddErrors(roleAssignResult);
+                                return View(model);
+                            }
+                        }
+                    }
+
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
-
-                    // Para obtener más información sobre cómo habilitar la confirmación de cuentas y el restablecimiento de contraseña, visite https://go.microsoft.com/fwlink/?LinkID=320771
-                    // Enviar un correo electrónico con este vínculo
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirmar la cuenta", "Para confirmar su cuenta, haga clic <a href=\"" + callbackUrl + "\">aquí</a>");
-
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }
 
-            var carreras = new List<SelectListItem>
-            {
-                new SelectListItem{ Value = "Computacion", Text = "Computacion" },
-                new SelectListItem{ Value = "Medicina", Text = "Medicina" },
-                new SelectListItem{ Value = "Leyes", Text = "Leyes" },
-                new SelectListItem{ Value = "Administracion", Text = "Administracion" },
-            };
-
-            ViewBag.Carreras = carreras;
-
-            // Si llegamos a este punto, es que se ha producido un error y volvemos a mostrar el formulario
             return View(model);
         }
+
+
+
 
         //
         // GET: /Account/ConfirmEmail

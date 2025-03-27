@@ -35,6 +35,7 @@ namespace ProyectoPograAvanzada.Models
             return new ApplicationDbContext();
         }
         public DbSet<Producto> Productos { get; set; }
+        public DbSet<Reseñas> Reseñas { get; set; }
 
 
     }
