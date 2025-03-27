@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\",
+  "WorkspaceRootPath": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\",
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +13,12 @@
     {
       "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\migrations\\202503211822556_ajustescarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\migrations\\202503211822556_ajustescarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|c:\\users\\rroci\\documents\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\models\\identitymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\models\\identitymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|c:\\users\\rroci\\documents\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\controllers\\detallepedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\controllers\\detallepedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\models\\carrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,14 +31,54 @@
     {
       "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\migrations\\202503211801045_carrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\migrations\\202503211801045_carrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|c:\\users\\rroci\\documents\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\migrations\\202503250436567_pedidodetallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\migrations\\202503250436567_pedidodetallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\proyectopograavanzada\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\proyectopograavanzada\\models\\identitymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\models\\identitymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|c:\\users\\rroci\\documents\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\models\\detallepedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\models\\detallepedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|c:\\users\\rroci\\documents\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\models\\pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\models\\pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|c:\\users\\rroci\\documents\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\views\\productoes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\views\\productoes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\proyectopograavanzada\\controllers\\productoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\controllers\\productoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\proyectopograavanzada\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\proyectopograavanzada\\migrations\\202503202258524_productoynetidentitytables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\migrations\\202503202258524_productoynetidentitytables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\proyectopograavanzada\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\proyectopograavanzada\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\controllers\\productoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\controllers\\productoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\proyectopograavanzada\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,7 +89,232 @@
         {
           "DockedWidth": 200,
           "SelectedChildIndex": 5,
+          "SelectedChildIndex": 56,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:14:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{809f6ff3-8092-454a-8003-6d4091f9b5bb}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{809f6ff3-8092-454a-8003-6d4091f9b5bb}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:141:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:142:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:143:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:144:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:145:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:146:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:147:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:148:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:151:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:149:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:150:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:152:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:153:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:154:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:155:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:156:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:159:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{ca8cc5c7-0231-406a-95cd-aa5ed6ac0190}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -59,6 +326,15 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-21T18:23:00.408Z",
+              "DocumentIndex": 0,
+              "Title": "PedidosController.cs",
+              "DocumentMoniker": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Controllers\\PedidosController.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Controllers\\PedidosController.cs",
+              "ToolTip": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Controllers\\PedidosController.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Controllers\\PedidosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T04:38:21.256Z",
               "EditorCaption": ""
             },
             {
@@ -72,6 +348,128 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACMAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-21T18:02:12.164Z",
+              "Title": "DetallePedidosController.cs",
+              "DocumentMoniker": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Controllers\\DetallePedidosController.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Controllers\\DetallePedidosController.cs",
+              "ToolTip": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Controllers\\DetallePedidosController.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Controllers\\DetallePedidosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T04:38:01.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "202503250436567_PedidoDetallePedido.cs",
+              "DocumentMoniker": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Migrations\\202503250436567_PedidoDetallePedido.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Migrations\\202503250436567_PedidoDetallePedido.cs",
+              "ToolTip": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Migrations\\202503250436567_PedidoDetallePedido.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Migrations\\202503250436567_PedidoDetallePedido.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T04:37:01.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DetallePedidos.cs",
+              "DocumentMoniker": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\DetallePedidos.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Models\\DetallePedidos.cs",
+              "ToolTip": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\DetallePedidos.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Models\\DetallePedidos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T04:30:28.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Pedidos.cs",
+              "DocumentMoniker": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\Pedidos.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Models\\Pedidos.cs",
+              "ToolTip": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\Pedidos.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Models\\Pedidos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T04:30:19.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Productoes\\Create.cshtml",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Views\\Productoes\\Create.cshtml",
+              "ToolTip": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Productoes\\Create.cshtml",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Views\\Productoes\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-21T00:33:00.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\packages.config",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\packages.config",
+              "ToolTip": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\packages.config",
+              "RelativeToolTip": "ProyectoPograAvanzada\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-03-20T23:00:12.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "202503202258524_ProductoYNetIdentityTables.cs",
+              "DocumentMoniker": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Migrations\\202503202258524_ProductoYNetIdentityTables.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Migrations\\202503202258524_ProductoYNetIdentityTables.cs",
+              "ToolTip": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Migrations\\202503202258524_ProductoYNetIdentityTables.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Migrations\\202503202258524_ProductoYNetIdentityTables.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAgwBMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T22:59:04.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Migrations\\Configuration.cs",
+              "ToolTip": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Migrations\\Configuration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T22:58:16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IdentityModels.cs",
+              "DocumentMoniker": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\IdentityModels.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Models\\IdentityModels.cs",
+              "ToolTip": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\IdentityModels.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Models\\IdentityModels.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCMAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T22:27:05.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Web.config",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Web.config",
+              "ToolTip": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Web.config",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-03-20T22:26:57.879Z",
               "EditorCaption": ""
             },
             {
@@ -164,6 +562,49 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-21T17:49:38.859Z",
               "EditorCaption": ""
+              "DocumentIndex": 8,
+              "Title": "ProductoesController.cs",
+              "DocumentMoniker": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Controllers\\ProductoesController.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Controllers\\ProductoesController.cs",
+              "ToolTip": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Controllers\\ProductoesController.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Controllers\\ProductoesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T00:32:51.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AccountViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\AccountViewModels.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Models\\AccountViewModels.cs",
+              "ToolTip": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\AccountViewModels.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Models\\AccountViewModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T22:13:16.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Models\\Producto.cs",
+              "ToolTip": "C:\\Users\\rroci\\Documents\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\Producto.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Models\\Producto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T22:13:03.815Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
