@@ -1,46 +1,68 @@
 ﻿@model ProyectoPograAvanzada.Models.Producto
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Crear Producto";
 }
 
-<h2 class="text-center text-success">Crear Producto</h2>
+<style>
+    .custom-celeste {
+        background-color: #87CEEB !important; 
+        border-color: #5DADE2 !important;
+    }
+
+    .text-celeste {
+        color: #5DADE2 !important;
+    }
+
+    .btn-celeste {
+        background-color: #5DADE2 !important;
+        border-color: #3498DB !important;
+        color: white !important;
+    }
+
+        .btn-celeste:hover {
+            background-color: #3498DB !important;
+            border-color: #2E86C1 !important;
+        }
+</style>
+
+<h2 class="text-center text-celeste fw-bold">Crear Producto</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
-    <div class="container p-4" style="background-color: #f5f5dc; border-radius: 10px;">
-        <h4 class="text-success">Detalles del Producto</h4>
+    <div class="container p-4 shadow-lg bg-light rounded">
+        <h4 class="text-celeste">Detalles del Producto</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
         <div class="mb-3">
-            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "form-label fw-bold text-success" })
-            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control border-success" } })
+            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "form-label fw-bold text-celeste" })
+            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control custom-celeste" } })
             @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
         </div>
 
         <div class="mb-3">
-            @Html.LabelFor(model => model.Precio, htmlAttributes: new { @class = "form-label fw-bold text-success" })
-            @Html.EditorFor(model => model.Precio, new { htmlAttributes = new { @class = "form-control border-success" } })
+            @Html.LabelFor(model => model.Precio, htmlAttributes: new { @class = "form-label fw-bold text-celeste" })
+            @Html.EditorFor(model => model.Precio, new { htmlAttributes = new { @class = "form-control custom-celeste" } })
             @Html.ValidationMessageFor(model => model.Precio, "", new { @class = "text-danger" })
         </div>
 
         <div class="mb-3">
-            @Html.LabelFor(model => model.CantidadaDisponible, htmlAttributes: new { @class = "form-label fw-bold text-success" })
-            @Html.EditorFor(model => model.CantidadaDisponible, new { htmlAttributes = new { @class = "form-control border-success" } })
+            @Html.LabelFor(model => model.CantidadaDisponible, htmlAttributes: new { @class = "form-label fw-bold text-celeste" })
+            @Html.EditorFor(model => model.CantidadaDisponible, new { htmlAttributes = new { @class = "form-control custom-celeste" } })
             @Html.ValidationMessageFor(model => model.CantidadaDisponible, "", new { @class = "text-danger" })
         </div>
 
         <div class="text-center">
-            <input type="submit" value="Crear" class="btn btn-success" />
+            <button type="submit" class="btn btn-celeste w-50">Crear</button>
         </div>
     </div>
 }
 
 <div class="text-center mt-3">
-    @Html.ActionLink("Volver a la lista", "Index", null, new { @class = "btn btn-outline-success" })
+    @Html.ActionLink("Volver a la lista", "Index", null, new { @class = "btn btn-outline-celeste btn-celeste" })
 </div>
 
 @section Scripts {

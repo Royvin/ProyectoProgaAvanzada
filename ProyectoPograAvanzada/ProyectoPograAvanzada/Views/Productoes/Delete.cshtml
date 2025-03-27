@@ -1,32 +1,53 @@
 ﻿@model ProyectoPograAvanzada.Models.Producto
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Eliminar Producto";
 }
 
-<h2 class="text-center text-danger">Eliminar Producto</h2>
+<style>
+    .custom-celeste {
+        background-color: #87CEEB !important; 
+        border-color: #5DADE2 !important;
+    }
 
-<h3 class="text-center text-warning">¿Estás seguro de que deseas eliminar este producto?</h3>
+    .text-celeste {
+        color: #5DADE2 !important;
+    }
 
-<div class="container p-4" style="background-color: #f5f5dc; border-radius: 10px;">
-    <h4 class="text-success">Detalles del Producto</h4>
+    .btn-celeste {
+        background-color: #5DADE2 !important;
+        border-color: #3498DB !important;
+        color: white !important;
+    }
+
+        .btn-celeste:hover {
+            background-color: #3498DB !important;
+            border-color: #2E86C1 !important;
+        }
+</style>
+
+<h2 class="text-center text-celeste fw-bold">Eliminar Producto</h2>
+<h3 class="text-center text-celeste fw-bold">¿Estás seguro de que deseas eliminar este producto?</h3>
+
+<div class="container p-4 shadow-lg bg-light rounded">
+    <h4 class="text-celeste">Detalles del Producto</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-4 fw-bold text-success">
+        <dt class="col-sm-4 fw-bold text-celeste">
             @Html.DisplayNameFor(model => model.Nombre)
         </dt>
         <dd class="col-sm-8">
             @Html.DisplayFor(model => model.Nombre)
         </dd>
 
-        <dt class="col-sm-4 fw-bold text-success">
+        <dt class="col-sm-4 fw-bold text-celeste">
             @Html.DisplayNameFor(model => model.Precio)
         </dt>
         <dd class="col-sm-8">
             @Html.DisplayFor(model => model.Precio)
         </dd>
 
-        <dt class="col-sm-4 fw-bold text-success">
+        <dt class="col-sm-4 fw-bold text-celeste">
             @Html.DisplayNameFor(model => model.CantidadaDisponible)
         </dt>
         <dd class="col-sm-8">
@@ -38,8 +59,8 @@
     {
         @Html.AntiForgeryToken()
         <div class="text-center mt-3">
-            <input type="submit" value="Eliminar" class="btn btn-danger" />
-            @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-outline-success" })
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-outline-celeste btn-celeste" })
         </div>
     }
 </div>
