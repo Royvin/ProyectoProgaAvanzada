@@ -205,3 +205,4 @@ C:\Users\rroci\Documents\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPog
 C:\Users\rroci\Documents\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.dll
 C:\Users\rroci\Documents\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.pdb
 C:\Users\rroci\Documents\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.PedidoDetallePedido.resources
+D:\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.PedidosYDetallesPedido.resources

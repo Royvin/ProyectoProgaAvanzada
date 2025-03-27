@@ -183,15 +183,13 @@
     <Compile Include="Migrations\202503211822556_AjustesCarrito.Designer.cs">
       <DependentUpon>202503211822556_AjustesCarrito.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Carrito.cs" />
-    <Compile Include="Migrations\202503250436567_PedidoDetallePedido.cs" />
-    <Compile Include="Migrations\202503250436567_PedidoDetallePedido.Designer.cs">
-      <DependentUpon>202503250436567_PedidoDetallePedido.cs</DependentUpon>
+    <Compile Include="Migrations\202503271748187_PedidosYDetallesPedido.cs" />
+    <Compile Include="Migrations\202503271748187_PedidosYDetallesPedido.Designer.cs">
+      <DependentUpon>202503271748187_PedidosYDetallesPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Carrito.cs" />
     <Compile Include="Models\DetallePedidos.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -327,8 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202503211822556_AjustesCarrito.resx">
       <DependentUpon>202503211822556_AjustesCarrito.cs</DependentUpon>
-    <EmbeddedResource Include="Migrations\202503250436567_PedidoDetallePedido.resx">
-      <DependentUpon>202503250436567_PedidoDetallePedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503271748187_PedidosYDetallesPedido.resx">
+      <DependentUpon>202503271748187_PedidosYDetallesPedido.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
