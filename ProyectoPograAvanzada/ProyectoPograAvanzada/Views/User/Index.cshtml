@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ProyectoPograAvanzada.Models.ApplicationUser>
+
+@{
+    ViewBag.Title = "Administrar Usuarios";
+}
+
+<h2>Lista de Usuarios</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>Nombre Completo</th>
+        <th>Email</th>
+        <th>Teléfono</th>
+        <th>Carrera</th>
+        <th>Acciones</th>
+    </tr>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.NombreCompleto</td>
+            <td>@user.Email</td>
+            <td>@user.PhoneNumber</td>
+            <td>@user.Carrera</td>
+            <td>
+                <a href="@Url.Action("Edit", "User", new { id = user.Id })" class="btn btn-warning">Editar</a>
+                <a href="@Url.Action("Delete", "User", new { id = user.Id })" class="btn btn-danger">Eliminar</a>
+            </td>
+        </tr>
+    }
+</table>

@@ -80,6 +80,18 @@ namespace ProyectoPograAvanzada.Models
         [Display(Name = "Confirmar contraseña")]
         [Compare("Password", ErrorMessage = "La contraseña y la contraseña de confirmación no coinciden.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "Nombre Completo")]
+        public string NombreCompleto { get; set; }
+
+        [Required]
+        [Display(Name = "Carrera")]
+        public string Carrera { get; set; }
+
+        [Phone]
+        [Display(Name = "Teléfono")]
+        public string PhoneNumber { get; set; }
     }
 
     public class ResetPasswordViewModel

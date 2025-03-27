@@ -6,6 +6,9 @@ using System.Web.Mvc;
 
 namespace ProyectoPograAvanzada.Controllers
 {
+
+    [Authorize(Roles = "User")]
+
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -13,6 +16,7 @@ namespace ProyectoPograAvanzada.Controllers
             return View();
         }
 
+        
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

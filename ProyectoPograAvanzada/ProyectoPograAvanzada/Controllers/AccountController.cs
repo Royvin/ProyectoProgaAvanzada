@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -6,9 +7,11 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ProyectoPograAvanzada.Models;
+
 
 namespace ProyectoPograAvanzada.Controllers
 {
@@ -22,7 +25,7 @@ namespace ProyectoPograAvanzada.Controllers
         {
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;
@@ -34,9 +37,9 @@ namespace ProyectoPograAvanzada.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -120,7 +123,7 @@ namespace ProyectoPograAvanzada.Controllers
             // Si un usuario introduce códigos incorrectos durante un intervalo especificado de tiempo, la cuenta del usuario 
             // se bloqueará durante un período de tiempo especificado. 
             // Puede configurar el bloqueo de la cuenta en IdentityConfig
-            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent:  model.RememberMe, rememberBrowser: model.RememberBrowser);
+            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent: model.RememberMe, rememberBrowser: model.RememberBrowser);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -139,11 +142,18 @@ namespace ProyectoPograAvanzada.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            var carreras = new List<SelectListItem>
+            {
+                new SelectListItem{ Value = "Computacion", Text = "Computacion" },
+                new SelectListItem{ Value = "Medicina", Text = "Medicina" },
+                new SelectListItem{ Value = "Leyes", Text = "Leyes" },
+                new SelectListItem{ Value = "Administracion", Text = "Administracion" },
+            };
+
+            ViewBag.Carreras = carreras;
             return View();
         }
 
-        //
-        // POST: /Account/Register
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -151,26 +161,54 @@ namespace ProyectoPograAvanzada.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    NombreCompleto = model.NombreCompleto,
+                    Carrera = model.Carrera
+                };
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
-                    // Para obtener más información sobre cómo habilitar la confirmación de cuentas y el restablecimiento de contraseña, visite https://go.microsoft.com/fwlink/?LinkID=320771
-                    // Enviar un correo electrónico con este vínculo
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirmar la cuenta", "Para confirmar su cuenta, haga clic <a href=\"" + callbackUrl + "\">aquí</a>");
+                    using (var context = new ApplicationDbContext())
+                    {
+                        var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
 
+                        // **Verificar si el rol "Admin" existe, si no lo crea**
+                        if (!roleManager.RoleExists("Admin"))
+                        {
+                            var role = new IdentityRole("Admin");
+                            await roleManager.CreateAsync(role);
+                        }
+
+                        // **Obtener el número de usuarios en la base de datos**
+                        int userCount = UserManager.Users.Count();
+
+                        // **Si es el primer usuario, asignarlo como Admin**
+                        if (userCount == 1)
+                        {
+                            var roleAssignResult = await UserManager.AddToRoleAsync(user.Id, "Admin");
+                            if (!roleAssignResult.Succeeded)
+                            {
+                                AddErrors(roleAssignResult);
+                                return View(model);
+                            }
+                        }
+                    }
+
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }
 
-            // Si llegamos a este punto, es que se ha producido un error y volvemos a mostrar el formulario
             return View(model);
         }
+
+
+
 
         //
         // GET: /Account/ConfirmEmail

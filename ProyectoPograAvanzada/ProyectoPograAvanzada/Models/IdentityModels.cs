@@ -11,6 +11,9 @@ namespace ProyectoPograAvanzada.Models
     // Para agregar datos de perfil del usuario, agregue más propiedades a su clase ApplicationUser. Visite https://go.microsoft.com/fwlink/?LinkID=317594 para obtener más información.
     public class ApplicationUser : IdentityUser
     {
+
+        public string NombreCompleto { get; set; }
+        public string Carrera { get; set; }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Tenga en cuenta que authenticationType debe coincidir con el valor definido en CookieAuthenticationOptions.AuthenticationType
@@ -39,6 +42,7 @@ namespace ProyectoPograAvanzada.Models
 
         public DbSet<Pedidos> Pedidos { get; set; }
         public DbSet<DetallePedidos> DetallePedidos { get; set; }
+        public DbSet<Reseñas> Reseñas { get; set; }
 
 
     }

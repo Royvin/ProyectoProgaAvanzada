@@ -168,6 +168,8 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PedidosController.cs" />
     <Compile Include="Controllers\ProductoesController.cs" />
+    <Compile Include="Controllers\ReseñasController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -186,6 +188,17 @@
     <Compile Include="Migrations\202503271748187_PedidosYDetallesPedido.cs" />
     <Compile Include="Migrations\202503271748187_PedidosYDetallesPedido.Designer.cs">
       <DependentUpon>202503271748187_PedidosYDetallesPedido.cs</DependentUpon>
+    <Compile Include="Migrations\202503260700383_RegistroActualizado.cs" />
+    <Compile Include="Migrations\202503260700383_RegistroActualizado.Designer.cs">
+      <DependentUpon>202503260700383_RegistroActualizado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202503270806235_Reseñas.cs" />
+    <Compile Include="Migrations\202503270806235_Reseñas.Designer.cs">
+      <DependentUpon>202503270806235_Reseñas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202503270808376_Resenas.cs" />
+    <Compile Include="Migrations\202503270808376_Resenas.Designer.cs">
+      <DependentUpon>202503270808376_Resenas.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -195,6 +208,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Pedidos.cs" />
     <Compile Include="Models\Producto.cs" />
+    <Compile Include="Models\Reseñas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -285,6 +299,14 @@
     <Content Include="Views\Pedidos\Details.cshtml" />
     <Content Include="Views\Pedidos\Edit.cshtml" />
     <Content Include="Views\Pedidos\Index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\Reseñas\Create.cshtml" />
+    <Content Include="Views\Reseñas\Delete.cshtml" />
+    <Content Include="Views\Reseñas\Details.cshtml" />
+    <Content Include="Views\Reseñas\Edit.cshtml" />
+    <Content Include="Views\Reseñas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -328,6 +350,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202503271748187_PedidosYDetallesPedido.resx">
       <DependentUpon>202503271748187_PedidosYDetallesPedido.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202503260700383_RegistroActualizado.resx">
+      <DependentUpon>202503260700383_RegistroActualizado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503270806235_Reseñas.resx">
+      <DependentUpon>202503270806235_Reseñas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503270808376_Resenas.resx">
+      <DependentUpon>202503270808376_Resenas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
