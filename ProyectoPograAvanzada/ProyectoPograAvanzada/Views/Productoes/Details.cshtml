@@ -33,6 +33,32 @@
     </dl>
 </div>
 
+<div class="container mt-4 p-4" style="background-color: #e9f5db; border-radius: 10px;">
+    <h4 class="text-success">Reseñas del Producto</h4>
+    <hr />
+
+    @if (Model.Reseñas != null && Model.Reseñas.Any())
+    {
+        <div class="list-group">
+            @foreach (var reseña in Model.Reseñas)
+            {
+                <div class="list-group-item">
+                    <h5 class="fw-bold">@reseña.Titulo</h5>
+                    <p>@reseña.Descripcion</p>
+                    <p>@reseña.FechaCreacion</p>
+                    <small class="text-muted">Calificación: @reseña.Calificacion / 5</small>
+                    @Html.ActionLink("Eliminar", "Delete", "Reseñas", new { id = reseña.IdReseña }, new { @class = "btn btn-danger btn-sm ml-3" })
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p class="text-muted">Aún no hay reseñas para este producto.</p>
+    }
+</div>
+
+
 <div class="text-center mt-3">
     @Html.ActionLink("Editar", "Edit", new { id = Model.IdProducto }, new { @class = "btn btn-warning" })
     @Html.ActionLink("Volver a la lista", "Index", null, new { @class = "btn btn-outline-success" })

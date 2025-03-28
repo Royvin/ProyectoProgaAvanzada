@@ -311,3 +311,4 @@ C:\Users\Personal\Documents\University\Progra Avanzada\Proyecto\Code\ProyectoPro
 C:\Users\Personal\Documents\University\Progra Avanzada\Proyecto\Code\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.RegistroActualizado.resources
 C:\Users\Personal\Documents\University\Progra Avanzada\Proyecto\Code\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.Reseñas.resources
 C:\Users\Personal\Documents\University\Progra Avanzada\Proyecto\Code\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.Resenas.resources
+D:\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.Resenas.resources

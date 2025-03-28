@@ -39,6 +39,7 @@
                         @Html.ActionLink("Detalles", "Details", new { id = item.IdProducto }, new { @class = "btn btn-info btn-sm" })
                         @Html.ActionLink("Eliminar", "Delete", new { id = item.IdProducto }, new { @class = "btn btn-danger btn-sm" })
                         @Html.ActionLink("Añadir al Carrito", "AnadirCarrito", "Carrito", new { id = item.IdProducto }, new { @class = "btn btn-primary btn-sm" })
+                        @Html.ActionLink("Añadir reseña", "Create", "Reseñas", new { idProducto = item.IdProducto }, new { @class = "btn btn-success btn-sm" })
                     </td>
                 </tr>
             }

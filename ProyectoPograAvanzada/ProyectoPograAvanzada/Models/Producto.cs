@@ -18,6 +18,7 @@ namespace ProyectoPograAvanzada.Models
         [Required]
         public int CantidadaDisponible { get; set; }
 
+        public virtual ICollection<Reseñas> Reseñas { get; set; }
 
-	}
+    }
 }

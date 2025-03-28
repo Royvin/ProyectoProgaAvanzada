@@ -27,13 +27,19 @@ namespace ProyectoPograAvanzada.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Producto producto = db.Productos.Find(id);
+
+            Producto producto = db.Productos
+                                  .Include(p => p.Reseñas)
+                                  .FirstOrDefault(p => p.IdProducto == id);
+
             if (producto == null)
             {
                 return HttpNotFound();
             }
+
             return View(producto);
         }
+
 
         // GET: Productoes/Create
         public ActionResult Create()
