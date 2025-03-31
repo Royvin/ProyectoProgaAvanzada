@@ -163,7 +163,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CarritoController.cs" />
-    <Compile Include="Controllers\DetallePedidosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PedidosController.cs" />
@@ -193,10 +192,13 @@
     <Compile Include="Migrations\202503281551073_Resenas.Designer.cs">
       <DependentUpon>202503281551073_Resenas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202503311603027_AjustesPedidos.cs" />
+    <Compile Include="Migrations\202503311603027_AjustesPedidos.Designer.cs">
+      <DependentUpon>202503311603027_AjustesPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Carrito.cs" />
-    <Compile Include="Models\DetallePedidos.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Pedidos.cs" />
@@ -287,16 +289,13 @@
     <Content Include="Views\DetallePedidos\Details.cshtml" />
     <Content Include="Views\DetallePedidos\Edit.cshtml" />
     <Content Include="Views\DetallePedidos\Index.cshtml" />
-    <Content Include="Views\Pedidos\Create.cshtml" />
-    <Content Include="Views\Pedidos\Delete.cshtml" />
-    <Content Include="Views\Pedidos\Details.cshtml" />
-    <Content Include="Views\Pedidos\Edit.cshtml" />
-    <Content Include="Views\Pedidos\Index.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Delete.cshtml" />
     <Content Include="Views\Reseñas\Create.cshtml" />
     <Content Include="Views\Reseñas\Delete.cshtml" />
+    <Content Include="Views\Pedidos\Index.cshtml" />
+    <Content Include="Views\Pedidos\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -343,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202503281551073_Resenas.resx">
       <DependentUpon>202503281551073_Resenas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503311603027_AjustesPedidos.resx">
+      <DependentUpon>202503311603027_AjustesPedidos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -41,7 +41,7 @@ namespace ProyectoPograAvanzada.Models
 
 
         public DbSet<Pedidos> Pedidos { get; set; }
-        public DbSet<DetallePedidos> DetallePedidos { get; set; }
+        public DbSet<PedidoItem> PedidoItems { get; set; }
         public DbSet<Reseñas> Reseñas { get; set; }
 
 

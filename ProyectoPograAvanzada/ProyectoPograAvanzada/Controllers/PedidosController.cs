@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
 using System.Linq;
-using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using ProyectoPograAvanzada.Models;
 
@@ -17,102 +13,77 @@ namespace ProyectoPograAvanzada.Controllers
         // GET: Pedidos
         public ActionResult Index()
         {
-            return View(db.Pedidos.ToList());
+            var pedidos = db.Pedidos.ToList();
+            return View(pedidos);
         }
 
         // GET: Pedidos/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Pedidos pedidos = db.Pedidos.Find(id);
-            if (pedidos == null)
+            var pedido = db.Pedidos.Find(id);
+            if (pedido == null)
             {
                 return HttpNotFound();
             }
-            return View(pedidos);
+            // Cargar los items del pedido
+            var items = db.PedidoItems.Where(i => i.IdPedido == id).ToList();
+            ViewBag.Items = items;
+            return View(pedido);
         }
 
-        // GET: Pedidos/Create
-        public ActionResult Create()
+        // Este método será llamado desde el CarritoController
+        public ActionResult CrearPedido(int carritoId)
         {
-            return View();
-        }
-
-        // POST: Pedidos/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdPedido,idCarrito,FechaCompra,Estado")] Pedidos pedidos)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Pedidos.Add(pedidos);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(pedidos);
-        }
-
-        // GET: Pedidos/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Pedidos pedidos = db.Pedidos.Find(id);
-            if (pedidos == null)
+            var carrito = db.Carritos.Find(carritoId);
+            if (carrito == null)
             {
                 return HttpNotFound();
             }
-            return View(pedidos);
-        }
 
-        // POST: Pedidos/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdPedido,idCarrito,FechaCompra,Estado")] Pedidos pedidos)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(pedidos).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(pedidos);
-        }
+            // Cargar los items del carrito
+            db.Entry(carrito).Collection(c => c.Items).Load();
 
-        // GET: Pedidos/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
+            // Verificar que el carrito tenga items
+            if (carrito.Items.Count == 0)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                TempData["Error"] = "No hay productos en el carrito";
+                return RedirectToAction("Index", "Carrito");
             }
-            Pedidos pedidos = db.Pedidos.Find(id);
-            if (pedidos == null)
-            {
-                return HttpNotFound();
-            }
-            return View(pedidos);
-        }
 
-        // POST: Pedidos/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Pedidos pedidos = db.Pedidos.Find(id);
-            db.Pedidos.Remove(pedidos);
+            // Crear un nuevo pedido
+            var pedido = new Pedidos
+            {
+                idCarrito = carritoId,
+                FechaCompra = DateTime.Now,
+                Estado = "Pendiente"
+            };
+
+            db.Pedidos.Add(pedido);
             db.SaveChanges();
-            return RedirectToAction("Index");
+
+            // Transferir items del carrito al pedido
+            foreach (var item in carrito.Items)
+            {
+                var pedidoItem = new PedidoItem
+                {
+                    IdPedido = pedido.IdPedido,
+                    ProductoId = item.ProductoId,
+                    Nombre = item.Nombre,
+                    Precio = item.Precio,
+                    Cantidad = item.Cantidad
+                };
+                db.PedidoItems.Add(pedidoItem);
+            }
+
+            // Guardar los cambios
+            db.SaveChanges();
+
+            // Limpiar el carrito
+            db.CarritoItems.RemoveRange(carrito.Items);
+            db.SaveChanges();
+
+            TempData["Success"] = "Pedido creado correctamente con el número: " + pedido.IdPedido;
+            return RedirectToAction("Details", new { id = pedido.IdPedido });
         }
 
         protected override void Dispose(bool disposing)

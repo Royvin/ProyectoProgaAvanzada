@@ -1,45 +1,37 @@
 ﻿@model IEnumerable<ProyectoPograAvanzada.Models.Pedidos>
-
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Lista de Pedidos";
 }
 
-<h2>Index</h2>
+<h2 class="text-center text-success">Lista de Pedidos</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.idCarrito)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FechaCompra)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Estado)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.idCarrito)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaCompra)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Estado)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdPedido }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdPedido }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdPedido })
-        </td>
-    </tr>
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
 }
 
+<table class="table table-striped table-hover">
+    <thead class="table-success">
+        <tr>
+            <th>ID Pedido</th>
+            <th>Fecha de Compra</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdPedido</td>
+                <td>@item.FechaCompra.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@item.Estado</td>
+                <td>
+                    @Html.ActionLink("Detalles", "Details", new { id = item.IdPedido }, new { @class = "btn btn-info btn-sm" })
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

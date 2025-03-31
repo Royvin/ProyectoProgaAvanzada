@@ -18,4 +18,18 @@ namespace ProyectoPograAvanzada.Models
         public string Estado { get; set; }
 
     }
+    public class PedidoItem
+    {
+        [Key]
+        public int Id { get; set; }
+        public int ProductoId { get; set; }
+        public string Nombre { get; set; }
+        public decimal Precio { get; set; }
+        public int Cantidad { get; set; }
+        public decimal Total => Precio * Cantidad;
+
+        // Propiedades para la relación con Pedido
+        public int IdPedido { get; set; }
+        public virtual Pedidos Pedidos { get; set; }
+    }
 }
