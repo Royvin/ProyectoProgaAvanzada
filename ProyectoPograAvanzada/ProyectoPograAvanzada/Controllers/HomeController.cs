@@ -7,7 +7,6 @@ using System.Web.Mvc;
 namespace ProyectoPograAvanzada.Controllers
 {
 
-    [Authorize(Roles = "User")]
 
     public class HomeController : Controller
     {

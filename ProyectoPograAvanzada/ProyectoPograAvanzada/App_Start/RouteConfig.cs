@@ -18,6 +18,13 @@ namespace ProyectoPograAvanzada
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+    name: "UserRole",
+    url: "UserRole/{action}/{id}",
+    defaults: new { controller = "UserRole", action = "Index", id = UrlParameter.Optional }
+);
+
         }
     }
 }

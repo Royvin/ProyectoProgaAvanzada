@@ -1,0 +1,20 @@
+﻿@model ProyectoPograAvanzada.Models.UserRoleViewModel
+
+@{
+    ViewBag.Title = "Asignar Rol";
+}
+
+<h2>Asignar Rol a @Model.UserName</h2>
+
+@using (Html.BeginForm("AssignRole", "UserRole", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.UserId)
+
+    <div class="form-group">
+        <label>Seleccionar Rol:</label>
+        @Html.DropDownListFor(m => m.RoleId, new SelectList(Model.Roles, "Id", "Name"), "Seleccione un Rol", new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a href="@Url.Action("Index", "UserRole")" class="btn btn-secondary">Cancelar</a>
+}

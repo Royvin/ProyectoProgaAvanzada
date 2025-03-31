@@ -8,7 +8,7 @@ using ProyectoPograAvanzada.Models;
 
 namespace ProyectoPograAvanzada.Controllers
 {
-    [Authorize] // Solo admin puede gestionar usuarios
+    [Authorize(Roles = "Admin")]
     public class UserController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
