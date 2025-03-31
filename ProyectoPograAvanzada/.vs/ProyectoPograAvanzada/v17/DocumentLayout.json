@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\controllers\\productoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\controllers\\productoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\views\\productoes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\views\\productoes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\views\\productoes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\views\\productoes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\migrations\\202503312045185_addimagenaproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\migrations\\202503312045185_addimagenaproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\views\\rese\u00F1as\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\views\\rese\u00F1as\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\proyectopograavanzada\\views\\productoes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\views\\productoes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\views\\rese\u00F1as\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\views\\rese\u00F1as\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,97 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAwE4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T22:24:00.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PedidosController.cs",
-              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Controllers\\PedidosController.cs",
-              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Controllers\\PedidosController.cs",
-              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Controllers\\PedidosController.cs",
-              "RelativeToolTip": "ProyectoPograAvanzada\\Controllers\\PedidosController.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAQwIwAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T21:04:48.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "202503312045185_AddImagenaProductos.cs",
-              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Migrations\\202503312045185_AddImagenaProductos.cs",
-              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Migrations\\202503312045185_AddImagenaProductos.cs",
-              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Migrations\\202503312045185_AddImagenaProductos.cs",
-              "RelativeToolTip": "ProyectoPograAvanzada\\Migrations\\202503312045185_AddImagenaProductos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T20:45:23.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Productoes\\Details.cshtml",
-              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Views\\Productoes\\Details.cshtml",
-              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Productoes\\Details.cshtml",
-              "RelativeToolTip": "ProyectoPograAvanzada\\Views\\Productoes\\Details.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAwDIAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T16:10:35.757Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Productoes\\Edit.cshtml",
-              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Views\\Productoes\\Edit.cshtml",
-              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Productoes\\Edit.cshtml",
-              "RelativeToolTip": "ProyectoPograAvanzada\\Views\\Productoes\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T20:40:34.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Productoes\\Create.cshtml",
               "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Views\\Productoes\\Create.cshtml",
               "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Productoes\\Create.cshtml",
               "RelativeToolTip": "ProyectoPograAvanzada\\Views\\Productoes\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAwFoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T20:38:13.083Z",
+              "WhenOpened": "2025-03-31T22:18:16.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductoesController.cs",
-              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Controllers\\ProductoesController.cs",
-              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Controllers\\ProductoesController.cs",
-              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Controllers\\ProductoesController.cs*",
-              "RelativeToolTip": "ProyectoPograAvanzada\\Controllers\\ProductoesController.cs*",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAAAIsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T20:35:17.584Z",
+              "DocumentIndex": 3,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Rese\u00F1as\\Delete.cshtml",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Views\\Rese\u00F1as\\Delete.cshtml",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Rese\u00F1as\\Delete.cshtml",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Views\\Rese\u00F1as\\Delete.cshtml",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAwF0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T22:14:50.604Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Producto.cs",
-              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\Producto.cs",
-              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Models\\Producto.cs",
-              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Models\\Producto.cs",
-              "RelativeToolTip": "ProyectoPograAvanzada\\Models\\Producto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T20:34:54.31Z",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Rese\u00F1as\\Create.cshtml",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Views\\Rese\u00F1as\\Create.cshtml",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\Rese\u00F1as\\Create.cshtml",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Views\\Rese\u00F1as\\Create.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAkwEMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T22:13:51.927Z",
               "EditorCaption": ""
             }
           ]

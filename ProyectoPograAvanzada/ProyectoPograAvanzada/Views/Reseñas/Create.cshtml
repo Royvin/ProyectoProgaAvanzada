@@ -1,50 +1,119 @@
 ﻿@model ProyectoPograAvanzada.Models.Reseñas
-
 @{
     ViewBag.Title = "Crear Reseña";
 }
 
-<h2 class="text-center text-primary">Añadir Reseña</h2>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-lg rounded-3 overflow-hidden">
+                <div class="card-header bg-primary bg-gradient text-white p-4">
+                    <h2 class="text-center mb-0">
+                        <i class="fas fa-star me-2"></i>Añadir Reseña
+                    </h2>
+                </div>
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
+                <div class="card-body p-4">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
 
-    <div class="container p-4" style="background-color: #f0f8ff; border-radius: 10px;">
-        <h4 class="text-primary">Detalles de la Reseña</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.ValidationSummary(true, "", new { @class = "alert alert-danger rounded-3" })
 
-        <div class="mb-3">
-            @Html.LabelFor(model => model.Titulo, htmlAttributes: new { @class = "form-label fw-bold text-primary" })
-            @Html.EditorFor(model => model.Titulo, new { htmlAttributes = new { @class = "form-control border-primary" } })
-            @Html.ValidationMessageFor(model => model.Titulo, "", new { @class = "text-danger" })
-        </div>
+                        <div class="card shadow-sm rounded-3 mb-4 border-primary border-top border-0 border-2">
+                            <div class="card-header bg-primary bg-opacity-10 py-3">
+                                <h4 class="mb-0 text-primary">
+                                    <i class="fas fa-comment-alt me-2"></i>Detalles de la Reseña
+                                </h4>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="mb-4">
+                                    @Html.LabelFor(model => model.Titulo, htmlAttributes: new { @class = "form-label fw-bold" })
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-primary text-white border-primary">
+                                            <i class="fas fa-heading"></i>
+                                        </span>
+                                        @Html.EditorFor(model => model.Titulo, new { htmlAttributes = new { @class = "form-control border-primary", placeholder = "Título de la reseña" } })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.Titulo, "", new { @class = "text-danger" })
+                                </div>
 
-        <div class="mb-3">
-            @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "form-label fw-bold text-primary" })
-            @Html.TextAreaFor(model => model.Descripcion, new { @class = "form-control border-primary", rows = 4 })
-            @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
-        </div>
+                                <div class="mb-4">
+                                    @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "form-label fw-bold" })
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-primary text-white border-primary">
+                                            <i class="fas fa-comment"></i>
+                                        </span>
+                                        @Html.TextAreaFor(model => model.Descripcion, new { @class = "form-control border-primary", rows = 5, placeholder = "Comparte tu opinión sobre este producto" })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+                                </div>
 
-        <div class="mb-3">
-            @Html.LabelFor(model => model.Calificacion, htmlAttributes: new { @class = "form-label fw-bold text-primary" })
-            @Html.DropDownListFor(model => model.Calificacion, new SelectList(new[] { 1, 2, 3, 4, 5 }), new { @class = "form-select border-primary" })
-            @Html.ValidationMessageFor(model => model.Calificacion, "", new { @class = "text-danger" })
-        </div>
+                                <div class="mb-4">
+                                    @Html.LabelFor(model => model.Calificacion, htmlAttributes: new { @class = "form-label fw-bold" })
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-primary text-white border-primary">
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        @Html.DropDownListFor(model => model.Calificacion, new SelectList(new[] { 1, 2, 3, 4, 5 }), "Seleccione una calificación", new { @class = "form-select border-primary" })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.Calificacion, "", new { @class = "text-danger" })
+                                    <div class="mt-2 text-center">
+                                        <div class="rating-preview">
+                                            @for (int i = 1; i <= 5; i++)
+                                            {
+                                                <i class="fas fa-star star-preview" data-rating="@i"></i>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
 
-        @Html.HiddenFor(model => model.IdProducto) 
+                                @Html.HiddenFor(model => model.IdProducto)
+                            </div>
+                        </div>
 
-        <div class="text-center">
-            <input type="submit" value="Añadir Reseña" class="btn btn-primary" />
+                        <div class="text-center mt-4 d-flex gap-3 justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-lg px-5 shadow">
+                                <i class="fas fa-save me-2"></i>Añadir Reseña
+                            </button>
+                            @Html.ActionLink("Volver a la lista", "Index", "Productoes", null, new { @class = "btn btn-outline-success" })
+                        </div>
+                    }
+                </div>
+            </div>
         </div>
     </div>
-}
-
-<div class="text-center mt-3">
-    @Html.ActionLink("Volver a la lista", "Index", "Productoes", null, new { @class = "btn btn-outline-success" })
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).ready(function () {
+            // Actualiza estrellas al cargar
+            updateStars($('#Calificacion').val());
+
+            // Evento de cambio en el dropdown
+            $('#Calificacion').change(function () {
+                updateStars($(this).val());
+            });
+
+            // Permitir selección por clic en estrellas
+            $('.star-preview').click(function () {
+                var rating = $(this).data('rating');
+                $('#Calificacion').val(rating);
+                updateStars(rating);
+            });
+
+            function updateStars(rating) {
+                rating = parseInt(rating) || 0;
+                $('.star-preview').each(function (index) {
+                    if (index < rating) {
+                        $(this).addClass('text-warning');
+                    } else {
+                        $(this).removeClass('text-warning');
+                    }
+                });
+            }
+        });
+    </script>
 }

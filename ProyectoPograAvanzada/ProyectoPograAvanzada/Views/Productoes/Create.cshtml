@@ -1,53 +1,89 @@
 ﻿@model ProyectoPograAvanzada.Models.Producto
-
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Crear Producto";
 }
 
-<h2 class="text-center text-success">Crear Producto</h2>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-lg rounded-3 overflow-hidden">
+                <div class="card-header bg-primary bg-gradient text-white p-4">
+                    <h2 class="text-center mb-0">
+                        <i class="fas fa-plus-circle me-2"></i>Crear Producto
+                    </h2>
+                </div>
 
-@using (Html.BeginForm("Create", "Productoes", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.AntiForgeryToken()
+                <div class="card-body p-4">
+                    @using (Html.BeginForm("Create", "Productoes", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
 
-<div class="container p-4" style="background-color: #f5f5dc; border-radius: 10px;">
-    <h4 class="text-success">Detalles del Producto</h4>
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.ValidationSummary(true, "", new { @class = "alert alert-danger rounded-3" })
 
-    <div class="mb-3">
-        @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "form-label fw-bold text-success" })
-        @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control border-success" } })
-        @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
-    </div>
+                        <div class="card shadow-sm rounded-3 mb-4 border-primary border-top border-0 border-2">
+                            <div class="card-header bg-primary bg-opacity-10 py-3">
+                                <h4 class="mb-0 text-primary">
+                                    <i class="fas fa-info-circle me-2"></i>Detalles del Producto
+                                </h4>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="mb-4">
+                                    @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "form-label fw-bold" })
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-primary text-white border-primary">
+                                            <i class="fas fa-book"></i>
+                                        </span>
+                                        @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control border-primary", placeholder = "Nombre del producto" } })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                                </div>
 
-    <div class="mb-3">
-        @Html.LabelFor(model => model.Precio, htmlAttributes: new { @class = "form-label fw-bold text-success" })
-        @Html.EditorFor(model => model.Precio, new { htmlAttributes = new { @class = "form-control border-success" } })
-        @Html.ValidationMessageFor(model => model.Precio, "", new { @class = "text-danger" })
-    </div>
+                                <div class="mb-4">
+                                    @Html.LabelFor(model => model.Precio, htmlAttributes: new { @class = "form-label fw-bold" })
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-primary text-white border-primary">
+                                            <i class="fas fa-dollar-sign"></i>
+                                        </span>
+                                        @Html.EditorFor(model => model.Precio, new { htmlAttributes = new { @class = "form-control border-primary", placeholder = "Precio del producto" } })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.Precio, "", new { @class = "text-danger" })
+                                </div>
 
-    <div class="mb-3">
-        @Html.LabelFor(model => model.CantidadaDisponible, htmlAttributes: new { @class = "form-label fw-bold text-success" })
-        @Html.EditorFor(model => model.CantidadaDisponible, new { htmlAttributes = new { @class = "form-control border-success" } })
-        @Html.ValidationMessageFor(model => model.CantidadaDisponible, "", new { @class = "text-danger" })
-    </div>
+                                <div class="mb-4">
+                                    @Html.LabelFor(model => model.CantidadaDisponible, htmlAttributes: new { @class = "form-label fw-bold" })
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-primary text-white border-primary">
+                                            <i class="fas fa-boxes"></i>
+                                        </span>
+                                        @Html.EditorFor(model => model.CantidadaDisponible, new { htmlAttributes = new { @class = "form-control border-primary", placeholder = "Cantidad disponible" } })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.CantidadaDisponible, "", new { @class = "text-danger" })
+                                </div>
 
-    <div class="form-group row mb-3">
-        @Html.LabelFor(model => model.Imagen, htmlAttributes: new { @class = "control-label col-md-3" })
-        <div class="col-md-9">
-            <input type="file" name="Imagen" id="Imagen" class="form-control" />
+                                <div class="mb-4">
+                                    @Html.LabelFor(model => model.Imagen, htmlAttributes: new { @class = "form-label fw-bold" })
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-primary text-white border-primary">
+                                            <i class="fas fa-image"></i>
+                                        </span>
+                                        <input type="file" name="Imagen" id="Imagen" class="form-control border-primary" />
+                                    </div>
+                                    <small class="text-muted">Seleccione una imagen para el producto</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4 d-flex gap-3 justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-lg px-5 shadow">
+                                <i class="fas fa-save me-2"></i>Crear Producto
+                            </button>
+                            @Html.ActionLink("Volver a la lista", "Index", null, new { @class = "btn btn-outline-secondary btn-lg px-4" })
+                        </div>
+                    }
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="text-center">
-        <input type="submit" value="Crear" class="btn btn-success" />
-    </div>
-</div>
-}
-
-<div class="text-center mt-3">
-    @Html.ActionLink("Volver a la lista", "Index", null, new { @class = "btn btn-outline-success" })
 </div>
 
 @section Scripts {

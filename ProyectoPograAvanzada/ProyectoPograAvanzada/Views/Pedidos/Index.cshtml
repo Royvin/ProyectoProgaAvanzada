@@ -3,64 +3,90 @@
     ViewBag.Title = "Lista de Pedidos";
 }
 
-<h2 class="text-center text-success">Lista de Pedidos</h2>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card border-0 shadow-lg rounded-3 overflow-hidden">
+                <div class="card-header bg-primary bg-gradient text-white p-4">
+                    <h2 class="text-center mb-0">
+                        <i class="fas fa-box me-2"></i>Lista de Pedidos
+                    </h2>
+                </div>
 
-@if (TempData["Success"] != null)
-{
-    <div class="alert alert-success">
-        @TempData["Success"]
-    </div>
-}
+                <div class="card-body p-4">
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show rounded-3 shadow-sm mb-4" role="alert">
+                            <i class="fas fa-check-circle me-2"></i>@TempData["Success"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
 
-@if (TempData["Error"] != null)
-{
-    <div class="alert alert-danger">
-        @TempData["Error"]
-    </div>
-}
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show rounded-3 shadow-sm mb-4" role="alert">
+                            <i class="fas fa-exclamation-triangle me-2"></i>@TempData["Error"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
 
-<table class="table table-striped table-hover">
-    <thead class="table-success">
-        <tr>
-            <th>ID Pedido</th>
-            <th>Fecha de Compra</th>
-            <th>Estado</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.IdPedido</td>
-                <td>@item.FechaCompra.ToString("dd/MM/yyyy HH:mm")</td>
-                <td>
-                    <form action="@Url.Action("ActualizarEstado", "Pedidos")" method="post" class="d-flex align-items-center">
-                        <input type="hidden" name="pedidoId" value="@item.IdPedido" />
-                        <select name="nuevoEstado" class="form-control form-control-sm" onchange="this.form.submit()" style="width: auto;">
-                            <option value="Pendiente" @(item.Estado == "Pendiente" ? "selected" : "")>Pendiente</option>
-                            <option value="Entregado" @(item.Estado == "Entregado" ? "selected" : "")>Entregado</option>
-                            <option value="Cancelado" @(item.Estado == "Cancelado" ? "selected" : "")>Canceelado</option>
-                        </select>
-                    </form>
-                </td>
-                <td>
-                    <div class="btn-group">
-                        @Html.ActionLink("Detalles", "Details", new { id = item.IdPedido }, new { @class = "btn btn-info btn-sm" })
-                        @if (item.Estado != "Entregado")
-                        {
-                            @Html.ActionLink("Editar", "Edit", new { id = item.IdPedido }, new { @class = "btn btn-warning btn-sm" })
-                            @Html.ActionLink("Eliminar", "Delete", new { id = item.IdPedido }, new { @class = "btn btn-danger btn-sm" })
-                        }
+                    <div class="table-responsive">
+                        <table class="table table-hover border rounded-3 overflow-hidden shadow-sm">
+                            <thead class="bg-primary text-white">
+                                <tr>
+                                    <th class="py-3">ID Pedido</th>
+                                    <th class="py-3">Fecha de Compra</th>
+                                    <th class="py-3">Estado</th>
+                                    <th class="py-3">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="align-middle py-3">
+                                            <span class="badge bg-primary rounded-pill px-3">@item.IdPedido</span>
+                                        </td>
+                                        <td class="align-middle py-3">
+                                            <i class="far fa-calendar-alt me-1 text-muted"></i>
+                                            @item.FechaCompra.ToString("dd/MM/yyyy HH:mm")
+                                        </td>
+                                        <td class="align-middle py-3">
+                                            <form action="@Url.Action("ActualizarEstado", "Pedidos")" method="post" class="d-flex align-items-center">
+                                                <input type="hidden" name="pedidoId" value="@item.IdPedido" />
+                                                <select name="nuevoEstado" class="form-select border-primary" onchange="this.form.submit()">
+                                                    <option value="Pendiente" @(item.Estado == "Pendiente" ? "selected" : "")>Pendiente</option>
+                                                    <option value="Entregado" @(item.Estado == "Entregado" ? "selected" : "")>Entregado</option>
+                                                    <option value="Cancelado" @(item.Estado == "Cancelado" ? "selected" : "")>Cancelado</option>
+                                                </select>
+                                            </form>
+                                        </td>
+                                        <td class="align-middle py-3">
+                                            <div class="d-flex gap-2">
+                                                @Html.ActionLink("Detalles", "Details", new { id = item.IdPedido },
+                                                new { @class = "btn btn-sm btn-primary px-3" })
+
+                                                @if (item.Estado != "Entregado")
+                                                {
+                                                    @Html.ActionLink("Editar", "Edit", new { id = item.IdPedido },
+                                                    new { @class = "btn btn-sm btn-outline-primary px-3" })
+                                                }
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
                     </div>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
 
-<div class="text-center mt-3">
-    @Html.ActionLink("Volver a Productos", "Index", "Productoes", null, new { @class = "btn btn-primary" })
+                    <div class="text-center mt-4">
+                        @Html.ActionLink("Volver a Productos", "Index", "Productoes", null,
+                        new { @class = "btn btn-primary btn-lg px-5 shadow rounded-pill" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>

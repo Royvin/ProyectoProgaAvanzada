@@ -1,45 +1,79 @@
 ﻿@model ProyectoPograAvanzada.Models.Producto
-
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Eliminar Producto";
 }
 
-<h2 class="text-center text-danger">Eliminar Producto</h2>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-lg rounded-3 overflow-hidden">
+                <div class="card-header bg-danger bg-gradient text-white p-4">
+                    <h2 class="text-center mb-0">
+                        <i class="fas fa-trash-alt me-2"></i>Eliminar Producto
+                    </h2>
+                </div>
 
-<h3 class="text-center text-warning">¿Estás seguro de que deseas eliminar este producto?</h3>
+                <div class="card-body p-4">
+                    <div class="alert alert-warning rounded-3 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <div class="fs-1 me-3">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div>
+                                <h4 class="alert-heading mb-1">¡Atención!</h4>
+                                <p class="mb-0">¿Estás seguro de que deseas eliminar este producto? Esta acción no se puede deshacer.</p>
+                            </div>
+                        </div>
+                    </div>
 
-<div class="container p-4" style="background-color: #f5f5dc; border-radius: 10px;">
-    <h4 class="text-success">Detalles del Producto</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-4 fw-bold text-success">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class="col-sm-8">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
+                    <div class="card shadow-sm rounded-3 mb-4 border-primary border-top border-0 border-2">
+                        <div class="card-header bg-primary bg-opacity-10 py-3">
+                            <h4 class="mb-0 text-primary">
+                                <i class="fas fa-info-circle me-2"></i>Detalles del Producto
+                            </h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row mb-3">
+                                <div class="col-md-4 fw-bold text-primary">
+                                    @Html.DisplayNameFor(model => model.Nombre)
+                                </div>
+                                <div class="col-md-8">
+                                    @Html.DisplayFor(model => model.Nombre)
+                                </div>
+                            </div>
 
-        <dt class="col-sm-4 fw-bold text-success">
-            @Html.DisplayNameFor(model => model.Precio)
-        </dt>
-        <dd class="col-sm-8">
-            @Html.DisplayFor(model => model.Precio)
-        </dd>
+                            <div class="row mb-3">
+                                <div class="col-md-4 fw-bold text-primary">
+                                    @Html.DisplayNameFor(model => model.Precio)
+                                </div>
+                                <div class="col-md-8">
+                                    $@Html.DisplayFor(model => model.Precio)
+                                </div>
+                            </div>
 
-        <dt class="col-sm-4 fw-bold text-success">
-            @Html.DisplayNameFor(model => model.CantidadaDisponible)
-        </dt>
-        <dd class="col-sm-8">
-            @Html.DisplayFor(model => model.CantidadaDisponible)
-        </dd>
-    </dl>
+                            <div class="row mb-3">
+                                <div class="col-md-4 fw-bold text-primary">
+                                    @Html.DisplayNameFor(model => model.CantidadaDisponible)
+                                </div>
+                                <div class="col-md-8">
+                                    @Html.DisplayFor(model => model.CantidadaDisponible) unidades
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        <div class="text-center mt-3">
-            <input type="submit" value="Eliminar" class="btn btn-danger" />
-            @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-outline-success" })
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="text-center mt-4 d-flex gap-3 justify-content-center">
+                            <button type="submit" class="btn btn-danger btn-lg px-5 shadow">
+                                <i class="fas fa-trash-alt me-2"></i>Eliminar Definitivamente
+                            </button>
+                            @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-outline-secondary btn-lg px-4" })
+                        </div>
+                    }
+                </div>
+            </div>
         </div>
-    }
+    </div>
 </div>

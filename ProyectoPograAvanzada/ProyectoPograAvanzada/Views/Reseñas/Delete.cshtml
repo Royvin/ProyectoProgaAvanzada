@@ -1,44 +1,94 @@
 ﻿@model ProyectoPograAvanzada.Models.Reseñas
-
 @{
     ViewBag.Title = "Eliminar Reseña";
 }
 
-<h2 class="text-center text-danger">Eliminar Reseña</h2>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-lg rounded-3 overflow-hidden">
+                <div class="card-header bg-danger bg-gradient text-white p-4">
+                    <h2 class="text-center mb-0">
+                        <i class="fas fa-trash-alt me-2"></i>Eliminar Reseña
+                    </h2>
+                </div>
 
-<div class="container p-4" style="background-color: #f0f8ff; border-radius: 10px;">
-    <h4 class="text-danger">¿Estás seguro de que deseas eliminar esta reseña?</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-4 fw-bold text-danger">
-            @Html.DisplayNameFor(model => model.Titulo)
-        </dt>
-        <dd class="col-sm-8">
-            @Html.DisplayFor(model => model.Titulo)
-        </dd>
+                <div class="card-body p-4">
+                    <div class="alert alert-danger rounded-3 mb-4">
+                        <div class="d-flex align-items-center">
+                            <div class="me-3">
+                                <i class="fas fa-exclamation-triangle fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1 fw-bold">¡Advertencia!</h5>
+                                <p class="mb-0">Esta acción eliminará permanentemente la reseña. ¿Estás seguro de que deseas continuar?</p>
+                            </div>
+                        </div>
+                    </div>
 
-        <dt class="col-sm-4 fw-bold text-danger">
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </dt>
-        <dd class="col-sm-8">
-            @Html.DisplayFor(model => model.Descripcion)
-        </dd>
+                    <div class="card shadow-sm rounded-3 mb-4 border-danger border-top border-0 border-2">
+                        <div class="card-header bg-danger bg-opacity-10 py-3">
+                            <h4 class="mb-0 text-danger">
+                                <i class="fas fa-info-circle me-2"></i>Detalles de la Reseña
+                            </h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <dl class="row">
+                                        <dt class="col-sm-3 fw-bold text-danger">
+                                            @Html.DisplayNameFor(model => model.Titulo)
+                                        </dt>
+                                        <dd class="col-sm-9 mb-3">
+                                            @Html.DisplayFor(model => model.Titulo)
+                                        </dd>
 
-        <dt class="col-sm-4 fw-bold text-danger">
-            @Html.DisplayNameFor(model => model.Calificacion)
-        </dt>
-        <dd class="col-sm-8">
-            @Html.DisplayFor(model => model.Calificacion)
-        </dd>
-    </dl>
+                                        <dt class="col-sm-3 fw-bold text-danger">
+                                            @Html.DisplayNameFor(model => model.Descripcion)
+                                        </dt>
+                                        <dd class="col-sm-9 mb-3">
+                                            <div class="p-3 bg-light rounded-3">
+                                                @Html.DisplayFor(model => model.Descripcion)
+                                            </div>
+                                        </dd>
 
-    <div class="text-center">
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
-            <input type="submit" value="Eliminar" class="btn btn-danger" />
-        }
+                                        <dt class="col-sm-3 fw-bold text-danger">
+                                            @Html.DisplayNameFor(model => model.Calificacion)
+                                        </dt>
+                                        <dd class="col-sm-9 mb-3">
+                                            <div>
+                                                @for (int i = 1; i <= 5; i++)
+                                                {
+                                                    <i class="fas fa-star @(i <= Model.Calificacion ? "text-warning" : "text-muted")"></i>
+                                                }
+                                                <span class="ms-2">(@Model.Calificacion de 5)</span>
+                                            </div>
+                                        </dd>
 
-        @Html.ActionLink("Cancelar", "Details", "Productoes", new { id = Model.IdProducto }, new { @class = "btn btn-outline-secondary" })
+                                        <dt class="col-sm-3 fw-bold text-danger">
+                                            @Html.DisplayNameFor(model => model.FechaCreacion)
+                                        </dt>
+                                        <dd class="col-sm-9 mb-3">
+                                            @Html.DisplayFor(model => model.FechaCreacion)
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4 d-flex gap-3 justify-content-center">
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-danger btn-lg px-5 shadow">
+                                <i class="fas fa-trash-alt me-2"></i>Eliminar Permanentemente
+                            </button>
+                        }
+                        @Html.ActionLink("Cancelar", "Details", "Productoes", new { id = Model.IdProducto }, new { @class = "btn btn-outline-secondary btn-lg px-4" })
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
