@@ -18,6 +18,8 @@ namespace ProyectoPograAvanzada.Models
         [Required]
         public int CantidadaDisponible { get; set; }
 
+        public byte[] Imagen { get; set; }
+
         public virtual ICollection<Reseñas> Reseñas { get; set; }
 
     }

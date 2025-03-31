@@ -49,7 +49,8 @@ namespace ProyectoPograAvanzada.Controllers
             ViewBag.Estados = new List<SelectListItem>
             {
                 new SelectListItem { Value = "Pendiente", Text = "Pendiente" },
-                new SelectListItem { Value = "Entregado", Text = "Entregado" }
+                new SelectListItem { Value = "Entregado", Text = "Entregado" },
+                new SelectListItem { Value = "Cancelado", Text = "Cancelado" }
             };
 
             return View(pedido);
@@ -60,14 +61,14 @@ namespace ProyectoPograAvanzada.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, FormCollection form)
         {
-            // Encontrar el pedido original
+            // Buscamos el pedido original
             var pedido = db.Pedidos.Find(id);
             if (pedido == null)
             {
                 return HttpNotFound();
             }
 
-            // Verificar si el estado cambió de Pendiente a Entregado
+            // Confirmamos si el estado cambio de pendiente a entregado
             string nuevoEstado = form["Estado"];
             bool cambioAEntregado = false;
 
@@ -76,77 +77,42 @@ namespace ProyectoPograAvanzada.Controllers
                 cambioAEntregado = true;
             }
 
+            // Actualizamos el estado del pedido
+            pedido.Estado = nuevoEstado;
+
             try
             {
-                // Obtener todos los items para este pedido
+                // Optenemos todos los items de este pedido
                 var items = db.PedidoItems.Where(i => i.IdPedido == id).ToList();
-                var itemsActualizados = new List<PedidoItem>();
 
-                // Primera pasada: Analizar y validar todas las cantidades sin actualizar la base de datos
+                // Realizamos este foreach para recorrer todos los items y encontrar las cantidades actualizadas
                 foreach (string key in form.AllKeys)
                 {
                     if (key.StartsWith("itemCantidad[") && key.EndsWith("]"))
                     {
-                        // Extraer el ID del item de la clave (formato: itemCantidad[123])
+                        // Extraemos el ID desde la Key
                         string itemIdStr = key.Substring(13, key.Length - 14);
                         int itemId;
 
                         if (int.TryParse(itemIdStr, out itemId))
                         {
-                            // Encontrar el item correspondiente
+                            // Encontramos el Item que coincida
                             var item = items.FirstOrDefault(i => i.Id == itemId);
                             if (item != null)
                             {
-                                // Analizar la cantidad
+                                // Actualizamos las cantidades
                                 int nuevaCantidad;
                                 if (int.TryParse(form[key], out nuevaCantidad) && nuevaCantidad > 0)
                                 {
-                                    // Si cambia a Entregado, verificar disponibilidad de inventario
-                                    if (cambioAEntregado)
-                                    {
-                                        var producto = db.Productos.Find(item.ProductoId);
-                                        if (producto != null && producto.CantidadaDisponible < nuevaCantidad)
-                                        {
-                                            // Inventario insuficiente
-                                            ModelState.AddModelError("", $"No hay suficiente inventario para el producto '{item.Nombre}'. Disponible: {producto.CantidadaDisponible}, Solicitado: {nuevaCantidad}");
-                                            continue;
-                                        }
-                                    }
-
-                                    // Almacenar para la segunda pasada
                                     item.Cantidad = nuevaCantidad;
-                                    itemsActualizados.Add(item);
+                                    db.Entry(item).State = System.Data.Entity.EntityState.Modified;
                                 }
                             }
                         }
                     }
                 }
 
-                // Si hay errores de validación, volver a la vista
-                if (!ModelState.IsValid)
-                {
-                    // Recargar datos para la vista
-                    ViewBag.Items = items;
-                    ViewBag.Estados = new List<SelectListItem>
-            {
-                new SelectListItem { Value = "Pendiente", Text = "Pendiente" },
-                new SelectListItem { Value = "Entregado", Text = "Entregado" }
-            };
-
-                    return View(pedido);
-                }
-
-                // Actualizar el estado del pedido
-                pedido.Estado = nuevoEstado;
-                db.Entry(pedido).State = System.Data.Entity.EntityState.Modified;
-
-                // Segunda pasada: Actualizar cantidades en la base de datos
-                foreach (var item in itemsActualizados)
-                {
-                    db.Entry(item).State = System.Data.Entity.EntityState.Modified;
-                }
-
-                // Si cambió a Entregado, actualizar el inventario
+                // Si el estado cambio a entregado actualizar el inventario
                 if (cambioAEntregado)
                 {
                     foreach (var item in items)
@@ -176,63 +142,18 @@ namespace ProyectoPograAvanzada.Controllers
             {
                 ModelState.AddModelError("", "Error al guardar los cambios: " + ex.Message);
 
-                // Recargar datos para la vista
+                // Recaragarmos los datos para la vista
                 var itemsParaVista = db.PedidoItems.Where(i => i.IdPedido == id).ToList();
                 ViewBag.Items = itemsParaVista;
                 ViewBag.Estados = new List<SelectListItem>
         {
             new SelectListItem { Value = "Pendiente", Text = "Pendiente" },
-            new SelectListItem { Value = "Entregado", Text = "Entregado" }
+            new SelectListItem { Value = "Entregado", Text = "Entregado" },
+            new SelectListItem { Value = "Cancelado", Text = "Cancelado" }
         };
 
                 return View(pedido);
             }
-        }
-
-        // GET: Pedidos/Delete/5
-        public ActionResult Delete(int id)
-        {
-            var pedido = db.Pedidos.Find(id);
-            if (pedido == null)
-            {
-                return HttpNotFound();
-            }
-
-            // Cargar los items del pedido
-            var items = db.PedidoItems.Where(i => i.IdPedido == id).ToList();
-            ViewBag.Items = items;
-
-            return View(pedido);
-        }
-
-        // POST: Pedidos/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            var pedido = db.Pedidos.Find(id);
-            if (pedido == null)
-            {
-                return HttpNotFound();
-            }
-
-            // Verificar si el pedido ya está entregado
-            if (pedido.Estado == "Entregado")
-            {
-                TempData["Error"] = "No se puede eliminar un pedido que ya ha sido entregado, ya que afectaría al inventario.";
-                return RedirectToAction("Index");
-            }
-
-            // Eliminar primero los items del pedido
-            var pedidoItems = db.PedidoItems.Where(i => i.IdPedido == id).ToList();
-            db.PedidoItems.RemoveRange(pedidoItems);
-
-            // Luego eliminar el pedido
-            db.Pedidos.Remove(pedido);
-            db.SaveChanges();
-
-            TempData["Success"] = "Pedido eliminado correctamente.";
-            return RedirectToAction("Index");
         }
 
         // Este método será llamado desde el CarritoController

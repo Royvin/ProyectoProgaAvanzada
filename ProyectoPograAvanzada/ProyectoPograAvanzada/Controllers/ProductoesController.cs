@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Services.Description;
 using ProyectoPograAvanzada.Models;
 
 namespace ProyectoPograAvanzada.Controllers
@@ -52,10 +54,18 @@ namespace ProyectoPograAvanzada.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdProducto,Nombre,Precio,CantidadaDisponible")] Producto producto)
+        public ActionResult Create([Bind(Include = "IdProducto,Nombre,Precio,CantidadaDisponible")] Producto producto, HttpPostedFileBase Imagen)
         {
             if (ModelState.IsValid)
             {
+                if (Imagen != null && Imagen.ContentLength > 0)
+                {
+                    using (var binaryReader = new BinaryReader(Imagen.InputStream))
+                    {
+                        producto.Imagen = binaryReader.ReadBytes(Imagen.ContentLength);
+                    }
+                }
+
                 db.Productos.Add(producto);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -84,16 +94,50 @@ namespace ProyectoPograAvanzada.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdProducto,Nombre,Precio,CantidadaDisponible")] Producto producto)
+        public ActionResult Edit([Bind(Include = "IdProducto,Nombre,Precio,CantidadaDisponible")] Producto producto, HttpPostedFileBase Imagen)
         {
             if (ModelState.IsValid)
             {
+                if (Imagen != null && Imagen.ContentLength > 0)
+                {
+                    using (var binaryReader = new BinaryReader(Imagen.InputStream))
+                    {
+                        producto.Imagen = binaryReader.ReadBytes(Imagen.ContentLength);
+                    }
+                }
                 db.Entry(producto).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(producto);
         }
+
+        // GET: Productoes/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Producto producto = db.Productos.Find(id);
+            if (producto == null)
+            {
+                return HttpNotFound();
+            }
+            return View(producto);
+        }
+
+        // POST: Productoes/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Producto producto = db.Productos.Find(id);
+            db.Productos.Remove(producto);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
