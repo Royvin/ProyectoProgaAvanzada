@@ -85,10 +85,6 @@ namespace ProyectoPograAvanzada.Models
         [Display(Name = "Nombre Completo")]
         public string NombreCompleto { get; set; }
 
-        [Required]
-        [Display(Name = "Carrera")]
-        public string Carrera { get; set; }
-
         [Phone]
         [Display(Name = "Teléfono")]
         public string PhoneNumber { get; set; }

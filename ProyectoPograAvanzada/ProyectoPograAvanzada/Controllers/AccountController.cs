@@ -142,15 +142,6 @@ namespace ProyectoPograAvanzada.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            var carreras = new List<SelectListItem>
-            {
-                new SelectListItem{ Value = "Computacion", Text = "Computacion" },
-                new SelectListItem{ Value = "Medicina", Text = "Medicina" },
-                new SelectListItem{ Value = "Leyes", Text = "Leyes" },
-                new SelectListItem{ Value = "Administracion", Text = "Administracion" },
-            };
-
-            ViewBag.Carreras = carreras;
             return View();
         }
 
@@ -166,7 +157,6 @@ namespace ProyectoPograAvanzada.Controllers
                     UserName = model.Email,
                     Email = model.Email,
                     NombreCompleto = model.NombreCompleto,
-                    Carrera = model.Carrera
                 };
 
                 var result = await UserManager.CreateAsync(user, model.Password);

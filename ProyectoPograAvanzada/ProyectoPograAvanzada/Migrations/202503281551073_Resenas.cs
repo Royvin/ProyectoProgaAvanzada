@@ -23,14 +23,12 @@
                 .Index(t => t.IdProducto);
             
             AddColumn("dbo.AspNetUsers", "NombreCompleto", c => c.String());
-            AddColumn("dbo.AspNetUsers", "Carrera", c => c.String());
         }
         
         public override void Down()
         {
             DropForeignKey("dbo.Reseñas", "IdProducto", "dbo.Productoes");
             DropIndex("dbo.Reseñas", new[] { "IdProducto" });
-            DropColumn("dbo.AspNetUsers", "Carrera");
             DropColumn("dbo.AspNetUsers", "NombreCompleto");
             DropTable("dbo.Reseñas");
         }

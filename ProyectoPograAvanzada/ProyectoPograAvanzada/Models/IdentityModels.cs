@@ -13,7 +13,6 @@ namespace ProyectoPograAvanzada.Models
     {
 
         public string NombreCompleto { get; set; }
-        public string Carrera { get; set; }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Tenga en cuenta que authenticationType debe coincidir con el valor definido en CookieAuthenticationOptions.AuthenticationType

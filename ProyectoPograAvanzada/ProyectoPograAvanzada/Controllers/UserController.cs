@@ -48,7 +48,6 @@ namespace ProyectoPograAvanzada.Controllers
                 if (user != null)
                 {
                     user.NombreCompleto = model.NombreCompleto;
-                    user.Carrera = model.Carrera;
                     user.Email = model.Email;
                     user.PhoneNumber = model.PhoneNumber;
 

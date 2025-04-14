@@ -314,3 +314,4 @@ C:\Users\Personal\Documents\University\Progra Avanzada\Proyecto\Code\ProyectoPro
 D:\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.Resenas.resources
 D:\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.AjustesPedidos.resources
 D:\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.AddImagenaProductos.resources
+D:\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.AjustesUsuarios.resources
