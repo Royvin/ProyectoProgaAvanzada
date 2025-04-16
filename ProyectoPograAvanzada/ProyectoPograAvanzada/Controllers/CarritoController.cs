@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using ProyectoPograAvanzada.Models;
 
 namespace ProyectoPograAvanzada.Controllers
 {
+    [Authorize]
     public class CarritoController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -93,17 +95,23 @@ namespace ProyectoPograAvanzada.Controllers
 
         private Carrito BuscarOCrearCarrito()
         {
-            // Aquí puedes implementar lógica para identificar al usuario
-            // Por ahora, usaremos un solo carrito genérico
-            // Buscar si ya existe un carrito
-            var carrito = db.Carritos.FirstOrDefault();
+            // Obtener el ID del usuario actual
+            string usuarioId = User.Identity.GetUserId();
+
+            // Buscar si ya existe un carrito para este usuario
+            var carrito = db.Carritos.FirstOrDefault(c => c.UsuarioId == usuarioId);
+
             if (carrito == null)
             {
-                // Si no existe, crear uno nuevo
-                carrito = new Carrito();
+                // Si no existe, crear uno nuevo asociado a este usuario
+                carrito = new Carrito
+                {
+                    UsuarioId = usuarioId
+                };
                 db.Carritos.Add(carrito);
                 db.SaveChanges();
             }
+
             return carrito;
         }
     }

@@ -166,25 +166,19 @@ namespace ProyectoPograAvanzada.Controllers
                     {
                         var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
 
-                        // **Verificar si el rol "Admin" existe, si no lo crea**
-                        if (!roleManager.RoleExists("Admin"))
+                        // Verificar si el rol "User" existe, si no lo crea
+                        if (!roleManager.RoleExists("User"))
                         {
-                            var role = new IdentityRole("Admin");
+                            var role = new IdentityRole("User");
                             await roleManager.CreateAsync(role);
                         }
 
-                        // **Obtener el número de usuarios en la base de datos**
-                        int userCount = UserManager.Users.Count();
-
-                        // **Si es el primer usuario, asignarlo como Admin**
-                        if (userCount == 1)
+                        // Asignar el rol "User" al nuevo usuario
+                        var roleAssignResult = await UserManager.AddToRoleAsync(user.Id, "User");
+                        if (!roleAssignResult.Succeeded)
                         {
-                            var roleAssignResult = await UserManager.AddToRoleAsync(user.Id, "Admin");
-                            if (!roleAssignResult.Succeeded)
-                            {
-                                AddErrors(roleAssignResult);
-                                return View(model);
-                            }
+                            AddErrors(roleAssignResult);
+                            return View(model);
                         }
                     }
 

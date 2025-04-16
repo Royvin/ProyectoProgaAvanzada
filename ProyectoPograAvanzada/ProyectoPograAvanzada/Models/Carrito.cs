@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -10,9 +11,14 @@ namespace ProyectoPograAvanzada.Models
     {
         [Key]
         public int Id { get; set; }
-        //public string UsuarioId { get; set; } // ID del usuario (puede depender del sistema de autenticación)
 
-        // Propiedad de navegación
+        // Clave foránea para el usuario
+        [Required]
+        public string UsuarioId { get; set; }
+
+        [ForeignKey("UsuarioId")]
+        public virtual ApplicationUser Usuario { get; set; }
+
         public virtual List<CarritoItem> Items { get; set; } = new List<CarritoItem>();
     }
 

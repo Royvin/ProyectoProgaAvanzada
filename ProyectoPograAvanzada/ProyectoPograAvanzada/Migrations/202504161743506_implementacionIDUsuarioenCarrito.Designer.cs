@@ -7,13 +7,13 @@ namespace ProyectoPograAvanzada.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.5.1")]
-    public sealed partial class AjustesUsuarios : IMigrationMetadata
+    public sealed partial class implementacionIDUsuarioenCarrito : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AjustesUsuarios));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(implementacionIDUsuarioenCarrito));
         
         string IMigrationMetadata.Id
         {
-            get { return "202504120341196_AjustesUsuarios"; }
+            get { return "202504161743506_implementacionIDUsuarioenCarrito"; }
         }
         
         string IMigrationMetadata.Source

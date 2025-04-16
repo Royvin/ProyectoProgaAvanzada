@@ -7,7 +7,6 @@
     {
         public override void Up()
         {
-            DropColumn("dbo.AspNetUsers", "Carrera");
         }
         
         public override void Down()

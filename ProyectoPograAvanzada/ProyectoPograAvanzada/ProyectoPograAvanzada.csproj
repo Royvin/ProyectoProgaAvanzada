@@ -200,9 +200,13 @@
     <Compile Include="Migrations\202503312045185_AddImagenaProductos.Designer.cs">
       <DependentUpon>202503312045185_AddImagenaProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504120341196_AjustesUsuarios.cs" />
-    <Compile Include="Migrations\202504120341196_AjustesUsuarios.Designer.cs">
-      <DependentUpon>202504120341196_AjustesUsuarios.cs</DependentUpon>
+    <Compile Include="Migrations\202504152106495_AjustesUsuarios.cs" />
+    <Compile Include="Migrations\202504152106495_AjustesUsuarios.Designer.cs">
+      <DependentUpon>202504152106495_AjustesUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504161743506_implementacionIDUsuarioenCarrito.cs" />
+    <Compile Include="Migrations\202504161743506_implementacionIDUsuarioenCarrito.Designer.cs">
+      <DependentUpon>202504161743506_implementacionIDUsuarioenCarrito.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -353,8 +357,11 @@
     <EmbeddedResource Include="Migrations\202503312045185_AddImagenaProductos.resx">
       <DependentUpon>202503312045185_AddImagenaProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504120341196_AjustesUsuarios.resx">
-      <DependentUpon>202504120341196_AjustesUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504152106495_AjustesUsuarios.resx">
+      <DependentUpon>202504152106495_AjustesUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504161743506_implementacionIDUsuarioenCarrito.resx">
+      <DependentUpon>202504161743506_implementacionIDUsuarioenCarrito.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
