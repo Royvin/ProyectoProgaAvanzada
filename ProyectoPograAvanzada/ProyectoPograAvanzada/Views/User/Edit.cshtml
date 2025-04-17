@@ -1,46 +1,93 @@
 ﻿@model ProyectoPograAvanzada.Models.ApplicationUser
-
 @{
     ViewBag.Title = "Editar Usuario";
 }
 
-<h2>Editar Usuario</h2>
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-
-    <div class="form-horizontal">
-        <h4>Información del Usuario</h4>
-        <hr />
-
-        @Html.HiddenFor(model => model.Id)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.NombreCompleto, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NombreCompleto, new { htmlAttributes = new { @class = "form-control" } })
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-lg rounded-3 overflow-hidden mb-5">
+                <div class="card-header bg-warning bg-gradient text-white p-4">
+                    <h2 class="mb-0 fw-bold">
+                        <i class="fas fa-user-edit me-2"></i>Editar Usuario
+                    </h2>
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-        </div>
+            <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
+                <div class="card-body p-4">
+                    @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "needs-validation", novalidate = "novalidate" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(model => model.Id)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-        </div>
+                        <div class="mb-4 text-center">
+                            <div class="avatar bg-primary rounded-circle text-white mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                <span class="fs-3">@(Model.NombreCompleto != null ? Model.NombreCompleto.Substring(0, 1).ToUpper() : "U")</span>
+                            </div>
+                        </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Guardar" class="btn btn-primary" />
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    @Html.EditorFor(model => model.NombreCompleto, new { htmlAttributes = new { @class = "form-control", placeholder = "Nombre Completo" } })
+                                    @Html.LabelFor(model => model.NombreCompleto, "Nombre Completo")
+                                    <div class="invalid-feedback">
+                                        Por favor ingrese el nombre completo.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Correo Electrónico" } })
+                                    @Html.LabelFor(model => model.Email, "Correo Electrónico")
+                                    <div class="invalid-feedback">
+                                        Por favor ingrese un correo electrónico válido.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", placeholder = "Teléfono" } })
+                                    @Html.LabelFor(model => model.PhoneNumber, "Teléfono")
+                                    <div class="invalid-feedback">
+                                        Por favor ingrese un número de teléfono válido.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="d-flex justify-content-between">
+                            <a href="@Url.Action("Index", "User")" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-2"></i>Volver
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save me-2"></i>Guardar Cambios
+                            </button>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
     </div>
-}
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var forms = document.querySelectorAll('.needs-validation');
+
+        Array.prototype.slice.call(forms).forEach(function(form) {
+            form.addEventListener('submit', function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    });
+</script>

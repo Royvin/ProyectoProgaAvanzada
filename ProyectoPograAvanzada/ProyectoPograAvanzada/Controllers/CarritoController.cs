@@ -16,7 +16,6 @@ namespace ProyectoPograAvanzada.Controllers
         public ActionResult Index()
         {
             var carrito = BuscarOCrearCarrito();
-            // Cargar explícitamente los items si es necesario
             db.Entry(carrito).Collection(c => c.Items).Load();
             return View(carrito.Items.ToList());
         }
@@ -68,7 +67,7 @@ namespace ProyectoPograAvanzada.Controllers
 
             db.SaveChanges();
 
-            // Añadir mensaje de confirmación
+            // Mensaje de confirmación
             TempData["Message"] = $"¡{producto.Nombre} ha sido añadido al carrito!";
             return RedirectToAction("Index", "Home");
         }
@@ -126,7 +125,6 @@ namespace ProyectoPograAvanzada.Controllers
             return RedirectToAction("Index");
         }
 
-        // Método para proceder con el pedido
         public ActionResult Pedido()
         {
             var carrito = BuscarOCrearCarrito();
@@ -183,7 +181,6 @@ namespace ProyectoPograAvanzada.Controllers
             // Obtener el ID del usuario actual
             string usuarioId = User.Identity.GetUserId();
 
-            // Si el usuario no está autenticado, usar ID de sesión
             if (string.IsNullOrEmpty(usuarioId))
             {
                 usuarioId = Session.SessionID;

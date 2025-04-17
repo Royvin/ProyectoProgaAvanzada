@@ -212,6 +212,10 @@
     <Compile Include="Migrations\202504170013280_ImplementacionIdUsuarioEnPedidos.Designer.cs">
       <DependentUpon>202504170013280_ImplementacionIdUsuarioEnPedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202504171905505_fechaUltimaconexion.cs" />
+    <Compile Include="Migrations\202504171905505_fechaUltimaconexion.Designer.cs">
+      <DependentUpon>202504171905505_fechaUltimaconexion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Carrito.cs" />
@@ -368,6 +372,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504170013280_ImplementacionIdUsuarioEnPedidos.resx">
       <DependentUpon>202504170013280_ImplementacionIdUsuarioEnPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504171905505_fechaUltimaconexion.resx">
+      <DependentUpon>202504171905505_fechaUltimaconexion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

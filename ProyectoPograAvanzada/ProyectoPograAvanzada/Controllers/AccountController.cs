@@ -77,11 +77,16 @@ namespace ProyectoPograAvanzada.Controllers
             }
 
             // No cuenta los errores de inicio de sesión para el bloqueo de la cuenta
-            // Para permitir que los errores de contraseña desencadenen el bloqueo de la cuenta, cambie a shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
                 case SignInStatus.Success:
+                    var user = await UserManager.FindByEmailAsync(model.Email);
+                    if (user != null)
+                    {
+                        user.UltimaConexion = DateTime.Now;
+                        await UserManager.UpdateAsync(user);
+                    }
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -157,6 +162,7 @@ namespace ProyectoPograAvanzada.Controllers
                     UserName = model.Email,
                     Email = model.Email,
                     NombreCompleto = model.NombreCompleto,
+                    PhoneNumber = model.PhoneNumber,
                 };
 
                 var result = await UserManager.CreateAsync(user, model.Password);

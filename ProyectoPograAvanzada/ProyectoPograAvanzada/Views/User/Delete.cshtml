@@ -1,27 +1,78 @@
 ﻿@model ProyectoPograAvanzada.Models.ApplicationUser
-
 @{
     ViewBag.Title = "Eliminar Usuario";
 }
 
-<h2>Eliminar Usuario</h2>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card border-0 shadow-lg rounded-3 overflow-hidden mb-5">
+                <div class="card-header bg-danger bg-gradient text-white p-4">
+                    <h2 class="mb-0 fw-bold">
+                        <i class="fas fa-user-times me-2"></i>Eliminar Usuario
+                    </h2>
+                </div>
+            </div>
 
-<div>
-    <h4>¿Estás seguro de eliminar a @Model.NombreCompleto?</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>Correo:</dt>
-        <dd>@Model.Email</dd>
+            <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
+                <div class="card-body p-4">
+                    <div class="text-center mb-4">
+                        <div class="avatar bg-danger rounded-circle text-white mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="fas fa-exclamation-triangle fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold text-danger">¿Estás seguro de eliminar este usuario?</h4>
+                        <p class="text-muted">Esta acción no se puede deshacer.</p>
+                    </div>
 
-        <dt>Teléfono:</dt>
-        <dd>@Model.PhoneNumber</dd>
+                    <div class="card bg-light mb-4">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="avatar bg-primary rounded-circle text-white me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                    <span>@(Model.NombreCompleto != null ? Model.NombreCompleto.Substring(0, 1).ToUpper() : "U")</span>
+                                </div>
+                                <h5 class="mb-0 fw-bold">@Model.NombreCompleto</h5>
+                            </div>
 
-    </dl>
+                            <ul class="list-group list-group-flush bg-transparent">
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-2 bg-transparent">
+                                    <span class="text-muted">
+                                        <i class="fas fa-envelope me-2"></i>Correo:
+                                    </span>
+                                    <span class="fw-medium">@Model.Email</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-2 bg-transparent">
+                                    <span class="text-muted">
+                                        <i class="fas fa-phone me-2"></i>Teléfono:
+                                    </span>
+                                    <span class="fw-medium">@(string.IsNullOrEmpty(Model.PhoneNumber) ? "No disponible" : Model.PhoneNumber)</span>
+                                </li>
+                                @if (Model.UltimaConexion.HasValue)
+                                {
+                                    <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-2 bg-transparent">
+                                        <span class="text-muted">
+                                            <i class="fas fa-clock me-2"></i>Última conexión:
+                                        </span>
+                                        <span class="fw-medium">@Model.UltimaConexion.Value.ToString("dd/MM/yyyy HH:mm:ss")</span>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
 
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        <input type="submit" value="Eliminar" class="btn btn-danger" />
-        <a href="@Url.Action("Index")" class="btn btn-secondary">Cancelar</a>
-    }
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="d-flex justify-content-between gap-3">
+                            <a href="@Url.Action("Index", "User")" class="btn btn-outline-secondary flex-grow-1">
+                                <i class="fas fa-times me-2"></i>Cancelar
+                            </a>
+                            <button type="submit" class="btn btn-danger flex-grow-1">
+                                <i class="fas fa-trash me-2"></i>Eliminar Usuario
+                            </button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

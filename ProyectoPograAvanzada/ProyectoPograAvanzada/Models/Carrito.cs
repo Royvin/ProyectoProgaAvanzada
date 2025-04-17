@@ -12,7 +12,6 @@ namespace ProyectoPograAvanzada.Models
         [Key]
         public int Id { get; set; }
 
-        // Clave foránea para el usuario
         [Required]
         public string UsuarioId { get; set; }
 

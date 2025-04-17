@@ -83,13 +83,12 @@ namespace ProyectoPograAvanzada.Controllers
             // Obtener el ID del usuario actual
             string usuarioId = User.Identity.GetUserId();
 
-            // Crear un nuevo pedido con el ID del usuario
             var pedido = new Pedidos
             {
                 idCarrito = carritoId,
                 FechaCompra = DateTime.Now,
                 Estado = "Pendiente",
-                UsuarioId = usuarioId // Asignamos el ID del usuario actual
+                UsuarioId = usuarioId
             };
 
             db.Pedidos.Add(pedido);
@@ -109,7 +108,7 @@ namespace ProyectoPograAvanzada.Controllers
                 };
                 db.PedidoItems.Add(pedidoItem);
 
-                // Actualizar el inventario inmediatamente
+                // Actualizar el inventario 
                 var producto = db.Productos.Find(item.ProductoId);
                 if (producto != null)
                 {
@@ -122,7 +121,6 @@ namespace ProyectoPograAvanzada.Controllers
                 }
             }
 
-            // Guardar los cambios
             db.SaveChanges();
 
             // Limpiar el carrito

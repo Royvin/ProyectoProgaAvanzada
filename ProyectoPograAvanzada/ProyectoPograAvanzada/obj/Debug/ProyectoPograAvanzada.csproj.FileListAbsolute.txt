@@ -426,3 +426,4 @@ C:\Users\royam\Desktop\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPogra
 C:\Users\royam\Desktop\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.AjustesUsuarios.resources
 C:\Users\royam\Desktop\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.implementacionIDUsuarioenCarrito.resources
 C:\Users\royam\Desktop\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.ImplementacionIdUsuarioEnPedidos.resources
+C:\Users\royam\Desktop\PROGRAMACION AVANZADA\ProyectoProgaAvanzada\ProyectoPograAvanzada\ProyectoPograAvanzada\obj\Debug\ProyectoPograAvanzada.Migrations.fechaUltimaconexion.resources

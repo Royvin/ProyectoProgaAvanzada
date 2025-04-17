@@ -12,7 +12,7 @@
 <body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
         <div class="container">
-            @Html.ActionLink("Mi Tienda", "Index", "Home", new { area = "" }, new { @class = "navbar-brand fw-bold" })
+            @Html.ActionLink("Libreria Fidelitas", "Index", "Home", new { area = "" }, new { @class = "navbar-brand fw-bold" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar navegación" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,6 +33,9 @@
                         <li class="nav-item">
                             @Html.ActionLink("Administrar Productos", "Index", "Productoes", new { area = "" }, new { @class = "nav-link px-3" })
                         </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Administrar Usuarios", "Index", "User", new { area = "" }, new { @class = "nav-link px-3" })
+                        </li>
                     }
                 </ul>
                 <div class="d-flex">
@@ -46,34 +49,54 @@
         @RenderBody()
     </div>
 
-    <footer class="footer mt-5 py-4 bg-white border-top">
+    <footer class="footer mt-5 py-4 bg-primary text-white border-top">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="mb-0 text-muted">&copy; @DateTime.Now.Year - Mi Tienda Online</p>
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Libreria Fidelitas</h5>
+                    <p class="mb-0 opacity-75">&copy; @DateTime.Now.Year - Todos los derechos reservados</p>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item">
-                            <a href="#" class="text-muted text-decoration-none">
-                                <i class="fab fa-facebook-f me-1"></i>
+
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Contacto</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2">
+                            <a href="tel:+50622222222" class="text-decoration-none text-white opacity-75 hover-opacity-100">
+                                <i class="fas fa-phone-alt me-2"></i>+506 2222-2222
                             </a>
                         </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-muted text-decoration-none">
-                                <i class="fab fa-twitter me-1"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-muted text-decoration-none">
-                                <i class="fab fa-instagram"></i>
+                        <li>
+                            <a href="mailto:contacto@libreriafidelitas.com" class="text-decoration-none text-white opacity-75 hover-opacity-100">
+                                <i class="fas fa-envelope me-2"></i>contacto@libreriafidelitas.com
                             </a>
                         </li>
                     </ul>
                 </div>
+
+                <div class="col-md-4 text-md-end">
+                    <h5 class="fw-bold mb-3">Síguenos</h5>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+
+    <style>
+        .hover-opacity-100:hover {
+            opacity: 1 !important;
+            transition: opacity 0.3s ease;
+        }
+    </style>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

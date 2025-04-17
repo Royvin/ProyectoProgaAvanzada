@@ -1,28 +1,116 @@
 ﻿@model IEnumerable<ProyectoPograAvanzada.Models.ApplicationUser>
-
 @{
     ViewBag.Title = "Administrar Usuarios";
 }
 
-<h2>Lista de Usuarios</h2>
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card border-0 shadow-lg rounded-3 overflow-hidden mb-5">
+                <div class="card-header bg-primary bg-gradient text-white p-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="mb-0 fw-bold">
+                            <i class="fas fa-users me-2"></i>Administrar Usuarios
+                        </h2>
+                        <a href="@Url.Action("Create", "User")" class="btn btn-light">
+                            <i class="fas fa-plus-circle me-2"></i>Nuevo Usuario
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-<table class="table table-striped">
-    <tr>
-        <th>Nombre Completo</th>
-        <th>Email</th>
-        <th>Teléfono</th>
-        <th>Acciones</th>
-    </tr>
-    @foreach (var user in Model)
-    {
-        <tr>
-            <td>@user.NombreCompleto</td>
-            <td>@user.Email</td>
-            <td>@user.PhoneNumber</td>
-            <td>
-                <a href="@Url.Action("Edit", "User", new { id = user.Id })" class="btn btn-warning">Editar</a>
-                <a href="@Url.Action("Delete", "User", new { id = user.Id })" class="btn btn-danger">Eliminar</a>
-            </td>
-        </tr>
-    }
-</table>
+            @if (TempData["Message"] != null)
+            {
+                <div class="alert alert-success rounded-3 shadow-sm mb-4 animate__animated animate__fadeIn" role="alert">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <i class="fas fa-check-circle fa-2x text-success"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0 fw-bold">¡Operación Exitosa!</h5>
+                            <p class="mb-0">@TempData["Message"]</p>
+                        </div>
+                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+            }
+
+            <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0 align-middle">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="py-3 px-4">Nombre Completo</th>
+                                    <th class="py-3 px-4">Email</th>
+                                    <th class="py-3 px-4">Teléfono</th>
+                                    <th class="py-3 px-4">Última Conexión</th>
+                                    <th class="py-3 px-4 text-center">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var user in Model)
+                                {
+                                    <tr>
+                                        <td class="py-3 px-4">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar bg-primary rounded-circle text-white me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                                    <span>@(user.NombreCompleto != null ? user.NombreCompleto.Substring(0, 1).ToUpper() : "U")</span>
+                                                </div>
+                                                <div>@user.NombreCompleto</div>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-envelope text-muted me-2"></i>
+                                                @user.Email
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-phone text-muted me-2"></i>
+                                                @(string.IsNullOrEmpty(user.PhoneNumber) ? "No disponible" : user.PhoneNumber)
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            @if (user.UltimaConexion.HasValue)
+                                            {
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-clock text-muted me-2"></i>
+                                                    @user.UltimaConexion.Value.ToString("dd/MM/yyyy HH:mm:ss")
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge bg-light text-dark">No ha iniciado sesión</span>
+                                            }
+                                        </td>
+                                        <td class="py-3 px-4 text-center">
+                                            <div class="btn-group" role="group">
+                                                <a href="@Url.Action("Edit", "User", new { id = user.Id })" class="btn btn-outline-warning btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                                <a href="@Url.Action("Delete", "User", new { id = user.Id })" class="btn btn-outline-danger btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    });
+</script>
