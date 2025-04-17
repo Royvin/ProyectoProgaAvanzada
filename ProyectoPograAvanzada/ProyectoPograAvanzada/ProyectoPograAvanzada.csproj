@@ -208,6 +208,10 @@
     <Compile Include="Migrations\202504161743506_implementacionIDUsuarioenCarrito.Designer.cs">
       <DependentUpon>202504161743506_implementacionIDUsuarioenCarrito.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202504170013280_ImplementacionIdUsuarioEnPedidos.cs" />
+    <Compile Include="Migrations\202504170013280_ImplementacionIdUsuarioEnPedidos.Designer.cs">
+      <DependentUpon>202504170013280_ImplementacionIdUsuarioEnPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Carrito.cs" />
@@ -303,7 +307,6 @@
     <Content Include="Views\Reseñas\Delete.cshtml" />
     <Content Include="Views\Pedidos\Index.cshtml" />
     <Content Include="Views\Pedidos\Details.cshtml" />
-    <Content Include="Views\Pedidos\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -362,6 +365,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504161743506_implementacionIDUsuarioenCarrito.resx">
       <DependentUpon>202504161743506_implementacionIDUsuarioenCarrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504170013280_ImplementacionIdUsuarioEnPedidos.resx">
+      <DependentUpon>202504170013280_ImplementacionIdUsuarioEnPedidos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

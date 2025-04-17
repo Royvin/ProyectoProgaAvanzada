@@ -52,25 +52,27 @@
                                             @item.FechaCompra.ToString("dd/MM/yyyy HH:mm")
                                         </td>
                                         <td class="align-middle py-3">
-                                            <form action="@Url.Action("ActualizarEstado", "Pedidos")" method="post" class="d-flex align-items-center">
-                                                <input type="hidden" name="pedidoId" value="@item.IdPedido" />
-                                                <select name="nuevoEstado" class="form-select border-primary" onchange="this.form.submit()">
-                                                    <option value="Pendiente" @(item.Estado == "Pendiente" ? "selected" : "")>Pendiente</option>
-                                                    <option value="Entregado" @(item.Estado == "Entregado" ? "selected" : "")>Entregado</option>
-                                                    <option value="Cancelado" @(item.Estado == "Cancelado" ? "selected" : "")>Cancelado</option>
-                                                </select>
-                                            </form>
+                                            @if (item.Estado == "Entregado")
+                                            {
+                                                <span class="badge bg-success rounded-pill px-3">
+                                                    <i class="fas fa-check-circle me-1"></i>Entregado
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <form action="@Url.Action("ActualizarEstado", "Pedidos")" method="post" class="d-flex align-items-center">
+                                                    <input type="hidden" name="pedidoId" value="@item.IdPedido" />
+                                                    <select name="nuevoEstado" class="form-select border-primary" onchange="this.form.submit()">
+                                                        <option value="Pendiente" @(item.Estado == "Pendiente" ? "selected" : "")>Pendiente</option>
+                                                        <option value="Entregado">Entregado</option>
+                                                    </select>
+                                                </form>
+                                            }
                                         </td>
                                         <td class="align-middle py-3">
                                             <div class="d-flex gap-2">
                                                 @Html.ActionLink("Detalles", "Details", new { id = item.IdPedido },
                                                 new { @class = "btn btn-sm btn-primary px-3" })
-
-                                                @if (item.Estado != "Entregado")
-                                                {
-                                                    @Html.ActionLink("Editar", "Edit", new { id = item.IdPedido },
-                                                    new { @class = "btn btn-sm btn-outline-primary px-3" })
-                                                }
                                             </div>
                                         </td>
                                     </tr>
@@ -90,15 +92,13 @@
 </div>
 
 <script>
-    // Agregar confirmación al cambiar a "Entregado"
     document.addEventListener('DOMContentLoaded', function () {
         var selects = document.querySelectorAll('select[name="nuevoEstado"]');
         selects.forEach(function (select) {
             select.addEventListener('change', function (e) {
                 if (this.value === 'Entregado' && this.options[0].selected === false) {
-                    if (!confirm('¿Estás seguro de marcar este pedido como entregado? Esta acción reducirá el inventario y no se puede deshacer fácilmente.')) {
+                    if (!confirm('¿Estás seguro de marcar este pedido como entregado? Una vez cambiado, no podrás volver a modificar el estado.')) {
                         e.preventDefault();
-                        // Restaurar el valor anterior
                         this.value = this.options[0].value;
                         return false;
                     }

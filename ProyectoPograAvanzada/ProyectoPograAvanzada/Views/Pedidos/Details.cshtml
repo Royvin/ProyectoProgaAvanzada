@@ -38,7 +38,6 @@
                                         @{
                                             string badgeClass = "bg-warning text-dark";
                                             if (Model.Estado == "Entregado") { badgeClass = "bg-success"; }
-                                            else if (Model.Estado == "Cancelado") { badgeClass = "bg-danger"; }
                                         }
                                         <span class="badge @badgeClass rounded-pill px-3 py-2">@Model.Estado</span>
                                     </p>

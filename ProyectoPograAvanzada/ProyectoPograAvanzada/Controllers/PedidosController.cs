@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using ProyectoPograAvanzada.Models;
 
 namespace ProyectoPograAvanzada.Controllers
 {
+    [Authorize]
     public class PedidosController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -14,7 +16,9 @@ namespace ProyectoPograAvanzada.Controllers
         // GET: Pedidos
         public ActionResult Index()
         {
-            var pedidos = db.Pedidos.ToList();
+            string usuarioId = User.Identity.GetUserId();
+            var pedidos = db.Pedidos.Where(p => p.UsuarioId == usuarioId).ToList();
+
             return View(pedidos);
         }
 
@@ -26,134 +30,18 @@ namespace ProyectoPograAvanzada.Controllers
             {
                 return HttpNotFound();
             }
-            // Cargar los items del pedido
-            var items = db.PedidoItems.Where(i => i.IdPedido == id).ToList();
-            ViewBag.Items = items;
-            return View(pedido);
-        }
 
-        // GET: Pedidos/Edit/5
-        public ActionResult Edit(int id)
-        {
-            var pedido = db.Pedidos.Find(id);
-            if (pedido == null)
+            // Verificar que el pedido pertenece al usuario actual o es admin
+            string usuarioId = User.Identity.GetUserId();
+            if (pedido.UsuarioId != usuarioId && !User.IsInRole("Admin"))
             {
-                return HttpNotFound();
+                return new HttpStatusCodeResult(HttpStatusCode.Unauthorized);
             }
 
             // Cargar los items del pedido
             var items = db.PedidoItems.Where(i => i.IdPedido == id).ToList();
             ViewBag.Items = items;
-
-            // Preparar listas para los dropdown
-            ViewBag.Estados = new List<SelectListItem>
-            {
-                new SelectListItem { Value = "Pendiente", Text = "Pendiente" },
-                new SelectListItem { Value = "Entregado", Text = "Entregado" },
-                new SelectListItem { Value = "Cancelado", Text = "Cancelado" }
-            };
-
             return View(pedido);
-        }
-
-        // POST: Pedidos/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, FormCollection form)
-        {
-            // Buscamos el pedido original
-            var pedido = db.Pedidos.Find(id);
-            if (pedido == null)
-            {
-                return HttpNotFound();
-            }
-
-            // Confirmamos si el estado cambio de pendiente a entregado
-            string nuevoEstado = form["Estado"];
-            bool cambioAEntregado = false;
-
-            if (pedido.Estado != "Entregado" && nuevoEstado == "Entregado")
-            {
-                cambioAEntregado = true;
-            }
-
-            // Actualizamos el estado del pedido
-            pedido.Estado = nuevoEstado;
-
-            try
-            {
-                // Optenemos todos los items de este pedido
-                var items = db.PedidoItems.Where(i => i.IdPedido == id).ToList();
-
-                // Realizamos este foreach para recorrer todos los items y encontrar las cantidades actualizadas
-                foreach (string key in form.AllKeys)
-                {
-                    if (key.StartsWith("itemCantidad[") && key.EndsWith("]"))
-                    {
-                        // Extraemos el ID desde la Key
-                        string itemIdStr = key.Substring(13, key.Length - 14);
-                        int itemId;
-
-                        if (int.TryParse(itemIdStr, out itemId))
-                        {
-                            // Encontramos el Item que coincida
-                            var item = items.FirstOrDefault(i => i.Id == itemId);
-                            if (item != null)
-                            {
-                                // Actualizamos las cantidades
-                                int nuevaCantidad;
-                                if (int.TryParse(form[key], out nuevaCantidad) && nuevaCantidad > 0)
-                                {
-                                    item.Cantidad = nuevaCantidad;
-                                    db.Entry(item).State = System.Data.Entity.EntityState.Modified;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                // Si el estado cambio a entregado actualizar el inventario
-                if (cambioAEntregado)
-                {
-                    foreach (var item in items)
-                    {
-                        var producto = db.Productos.Find(item.ProductoId);
-                        if (producto != null)
-                        {
-                            producto.CantidadaDisponible -= item.Cantidad;
-                            if (producto.CantidadaDisponible < 0)
-                            {
-                                producto.CantidadaDisponible = 0;
-                            }
-                            db.Entry(producto).State = System.Data.Entity.EntityState.Modified;
-                        }
-                    }
-                    TempData["Success"] = "Pedido actualizado y marcado como entregado. Se ha actualizado el inventario.";
-                }
-                else
-                {
-                    TempData["Success"] = "Pedido actualizado correctamente.";
-                }
-
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", "Error al guardar los cambios: " + ex.Message);
-
-                // Recaragarmos los datos para la vista
-                var itemsParaVista = db.PedidoItems.Where(i => i.IdPedido == id).ToList();
-                ViewBag.Items = itemsParaVista;
-                ViewBag.Estados = new List<SelectListItem>
-        {
-            new SelectListItem { Value = "Pendiente", Text = "Pendiente" },
-            new SelectListItem { Value = "Entregado", Text = "Entregado" },
-            new SelectListItem { Value = "Cancelado", Text = "Cancelado" }
-        };
-
-                return View(pedido);
-            }
         }
 
         // Este método será llamado desde el CarritoController
@@ -175,20 +63,42 @@ namespace ProyectoPograAvanzada.Controllers
                 return RedirectToAction("Index", "Carrito");
             }
 
-            // Crear un nuevo pedido
+            // Verificar disponibilidad de inventario antes de crear el pedido
+            foreach (var item in carrito.Items)
+            {
+                var producto = db.Productos.Find(item.ProductoId);
+                if (producto == null)
+                {
+                    TempData["Error"] = $"Producto no encontrado: {item.Nombre}";
+                    return RedirectToAction("Index", "Carrito");
+                }
+
+                if (producto.CantidadaDisponible < item.Cantidad)
+                {
+                    TempData["Error"] = $"No hay suficiente inventario para: {item.Nombre}. Disponible: {producto.CantidadaDisponible}";
+                    return RedirectToAction("Index", "Carrito");
+                }
+            }
+
+            // Obtener el ID del usuario actual
+            string usuarioId = User.Identity.GetUserId();
+
+            // Crear un nuevo pedido con el ID del usuario
             var pedido = new Pedidos
             {
                 idCarrito = carritoId,
                 FechaCompra = DateTime.Now,
-                Estado = "Pendiente"
+                Estado = "Pendiente",
+                UsuarioId = usuarioId // Asignamos el ID del usuario actual
             };
 
             db.Pedidos.Add(pedido);
             db.SaveChanges();
 
-            // Transferir items del carrito al pedido
+            // Transferir items del carrito al pedido y actualizar inventario
             foreach (var item in carrito.Items)
             {
+                // Crear el item del pedido
                 var pedidoItem = new PedidoItem
                 {
                     IdPedido = pedido.IdPedido,
@@ -198,6 +108,18 @@ namespace ProyectoPograAvanzada.Controllers
                     Cantidad = item.Cantidad
                 };
                 db.PedidoItems.Add(pedidoItem);
+
+                // Actualizar el inventario inmediatamente
+                var producto = db.Productos.Find(item.ProductoId);
+                if (producto != null)
+                {
+                    producto.CantidadaDisponible -= item.Cantidad;
+                    if (producto.CantidadaDisponible < 0)
+                    {
+                        producto.CantidadaDisponible = 0;
+                    }
+                    db.Entry(producto).State = System.Data.Entity.EntityState.Modified;
+                }
             }
 
             // Guardar los cambios
@@ -207,7 +129,7 @@ namespace ProyectoPograAvanzada.Controllers
             db.CarritoItems.RemoveRange(carrito.Items);
             db.SaveChanges();
 
-            TempData["Success"] = "Pedido creado correctamente con el número: " + pedido.IdPedido;
+            TempData["Success"] = "Pedido creado correctamente con el número: " + pedido.IdPedido + ". El inventario ha sido actualizado.";
             return RedirectToAction("Details", new { id = pedido.IdPedido });
         }
 
@@ -216,50 +138,33 @@ namespace ProyectoPograAvanzada.Controllers
         public ActionResult ActualizarEstado(int pedidoId, string nuevoEstado)
         {
             var pedido = db.Pedidos.Find(pedidoId);
+
             if (pedido == null)
             {
-                return HttpNotFound();
-            }
-
-            // Si el pedido ya estaba en estado "Entregado", no hacemos nada
-            if (pedido.Estado == "Entregado" && nuevoEstado == "Entregado")
-            {
+                TempData["Error"] = "Pedido no encontrado.";
                 return RedirectToAction("Index");
             }
 
-            // Actualizar el estado del pedido
-            pedido.Estado = nuevoEstado;
-
-            // Si el nuevo estado es "Entregado", reducir el inventario
-            if (nuevoEstado == "Entregado")
+            // Verificar si el pedido ya está marcado como entregado
+            if (pedido.Estado == "Entregado")
             {
-                // Obtener todos los elementos del pedido
-                var pedidoItems = db.PedidoItems.Where(i => i.IdPedido == pedidoId).ToList();
+                TempData["Error"] = "No se puede modificar un pedido que ya ha sido entregado.";
+                return RedirectToAction("Index");
+            }
 
-                foreach (var item in pedidoItems)
-                {
-                    // Buscar el producto correspondiente
-                    var producto = db.Productos.Find(item.ProductoId);
-                    if (producto != null)
-                    {
-                        // Reducir la cantidad disponible
-                        producto.CantidadaDisponible -= item.Cantidad;
-                        // Asegurar que el stock no sea negativo
-                        if (producto.CantidadaDisponible < 0)
-                        {
-                            producto.CantidadaDisponible = 0;
-                        }
-                    }
-                }
+            // Actualizar el estado del pedido solo si es válido
+            if (nuevoEstado == "Pendiente" || nuevoEstado == "Entregado")
+            {
+                pedido.Estado = nuevoEstado;
+                db.SaveChanges();
 
-                TempData["Success"] = "Pedido marcado como entregado. Se ha actualizado el inventario.";
+                TempData["Success"] = $"Estado del pedido #{pedidoId} actualizado a '{nuevoEstado}' correctamente.";
             }
             else
             {
-                TempData["Success"] = "Estado del pedido actualizado correctamente.";
+                TempData["Error"] = "Estado no válido.";
             }
 
-            db.SaveChanges();
             return RedirectToAction("Index");
         }
 

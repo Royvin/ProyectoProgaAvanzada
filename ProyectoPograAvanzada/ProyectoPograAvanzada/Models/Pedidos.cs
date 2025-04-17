@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -16,6 +17,13 @@ namespace ProyectoPograAvanzada.Models
         public DateTime FechaCompra { get; set; }
         [Required]
         public string Estado { get; set; }
+
+        // Clave foránea para el usuario
+        [Required]
+        public string UsuarioId { get; set; }
+
+        [ForeignKey("UsuarioId")]
+        public virtual ApplicationUser Usuario { get; set; }
 
     }
     public class PedidoItem
