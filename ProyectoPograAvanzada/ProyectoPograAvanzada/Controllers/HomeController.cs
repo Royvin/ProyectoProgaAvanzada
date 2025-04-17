@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoPograAvanzada.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,15 +7,16 @@ using System.Web.Mvc;
 
 namespace ProyectoPograAvanzada.Controllers
 {
-
-    [Authorize(Roles = "User")]
-
     public class HomeController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
         public ActionResult Index()
         {
-            return View();
+            var productos = db.Productos.ToList();
+            return View(productos);
         }
+
 
         public ActionResult About()
         {

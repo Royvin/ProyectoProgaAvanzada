@@ -47,7 +47,7 @@
                                     {
                                         <tr>
                                             <td class="align-middle py-3">@item.Nombre</td>
-                                            <td class="align-middle py-3">$@item.Precio.ToString("N2")</td>
+                                            <td class="align-middle py-3">₡@item.Precio.ToString("N2")</td>
                                             <td class="align-middle py-3">
                                                 <form action="@Url.Action("ActualizarCantidad", "Carrito")" method="post" class="d-flex align-items-center">
                                                     <input type="hidden" name="productoId" value="@item.ProductoId" />
@@ -57,7 +57,7 @@
                                                     </button>
                                                 </form>
                                             </td>
-                                            <td class="align-middle py-3 fw-bold">$@item.Total.ToString("N2")</td>
+                                            <td class="align-middle py-3 fw-bold">₡@item.Total.ToString("N2")</td>
                                             <td class="align-middle py-3">
                                                 @Html.ActionLink("Eliminar", "EliminarDeCarrito", new { id = item.ProductoId },
                                                 new { @class = "btn btn-danger btn-sm shadow-sm rounded-pill px-3" })
@@ -69,7 +69,7 @@
                                     <tr>
                                         <td colspan="3" class="text-end py-3"><strong>Total:</strong></td>
                                         <td colspan="2" class="py-3 fw-bold fs-5 text-primary">
-                                            $@Model.Sum(item => item.Total).ToString("N2")
+                                            ₡@Model.Sum(item => item.Total).ToString("N2")
                                         </td>
                                     </tr>
                                 </tfoot>
@@ -89,7 +89,7 @@
                             </div>
                             <h3 class="mb-3">Tu carrito está vacío</h3>
                             <p class="text-muted mb-4">¡Explora nuestra colección y agrega productos!</p>
-                            @Html.ActionLink("Explorar Productos", "Index", "Productoes", null,
+                            @Html.ActionLink("Explorar Productos", "Index", "Home", null,
                             new { @class = "btn btn-lg btn-primary px-5 shadow rounded-pill" })
                         </div>
                     }

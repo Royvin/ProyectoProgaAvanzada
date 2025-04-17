@@ -66,16 +66,16 @@
                                     total += item.Total;
                                     <tr>
                                         <td class="align-middle py-3">@item.Nombre</td>
-                                        <td class="align-middle py-3">$@item.Precio.ToString("N2")</td>
+                                        <td class="align-middle py-3">₡@item.Precio.ToString("N2")</td>
                                         <td class="align-middle py-3">@item.Cantidad</td>
-                                        <td class="align-middle py-3 fw-bold">$@item.Total.ToString("N2")</td>
+                                        <td class="align-middle py-3 fw-bold">₡@item.Total.ToString("N2")</td>
                                     </tr>
                                 }
                             </tbody>
                             <tfoot class="bg-light">
                                 <tr>
                                     <td colspan="3" class="text-end py-3"><strong>Total del Pedido:</strong></td>
-                                    <td class="py-3 fw-bold fs-5 text-primary">$@total.ToString("N2")</td>
+                                    <td class="py-3 fw-bold fs-5 text-primary">₡@total.ToString("N2")</td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -83,7 +83,7 @@
 
                     <div class="d-flex justify-content-center mt-4 gap-3">
                         @Html.ActionLink("Volver a la Lista", "Index", null, new { @class = "btn btn-outline-secondary btn-lg px-4" })
-                        @Html.ActionLink("Volver a Productos", "Index", "Productoes", null, new { @class = "btn btn-primary btn-lg px-4" })
+                        @Html.ActionLink("Volver a Productos", "Index", "Home", null, new { @class = "btn btn-primary btn-lg px-4" })
                     </div>
                 </div>
             </div>

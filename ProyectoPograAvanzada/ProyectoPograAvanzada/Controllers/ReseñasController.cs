@@ -34,7 +34,7 @@ namespace ProyectoPograAvanzada.Controllers
                 reseña.FechaCreacion = DateTime.Now;
                 db.Reseñas.Add(reseña);
                 db.SaveChanges();
-                return RedirectToAction("Index", "Productoes");
+                return RedirectToAction("Index", "Home");
             }
             return View(reseña);
         }

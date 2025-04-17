@@ -1,33 +1,111 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model IEnumerable<ProyectoPograAvanzada.Models.Producto>
+@{
+    ViewBag.Title = "Catálogo de Productos";
 }
-
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
-
+<div class="container py-5">
     <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+        <div class="col-12">
+            <div class="card border-0 shadow-lg rounded-3 overflow-hidden mb-5">
+                <div class="card-header bg-primary bg-gradient text-white p-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="mb-0 fw-bold">
+                            <i class="fas fa-store me-2"></i>Catálogo de Productos
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            @if (TempData["Message"] != null)
+            {
+                <div class="alert alert-success rounded-3 shadow-sm mb-4 animate__animated animate__fadeIn" role="alert">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <i class="fas fa-check-circle fa-2x text-success"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0 fw-bold">¡Operación Exitosa!</h5>
+                            <p class="mb-0">@TempData["Message"]</p>
+                        </div>
+                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+            }
+
+            <div class="row g-4 justify-content-center">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden product-card transition-all hover-shadow">
+                            <div class="product-image-container" style="height: 250px; overflow: hidden; position: relative;">
+                                @if (item.Imagen != null && item.Imagen.Length > 0)
+                                {
+                                    var imageBase64 = Convert.ToBase64String(item.Imagen);
+                                    var imageSrc = $"data:image/jpg;base64,{imageBase64}";
+                                    <img src="@imageSrc" class="card-img-top" alt="@item.Nombre"
+                                         style="object-fit: cover; height: 100%; width: 100%;" />
+                                }
+                                else
+                                {
+                                    <img src="https://via.placeholder.com/400x250?text=Sin+Imagen"
+                                         class="card-img-top" alt="Sin imagen disponible"
+                                         style="object-fit: cover; height: 100%; width: 100%;" />
+                                }
+                                <div class="position-absolute top-0 end-0 m-2">
+                                    <span class="badge bg-primary rounded-pill px-3 py-2 shadow-sm">
+                                        $@item.Precio
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="card-body p-4">
+                                <h5 class="card-title fw-bold mb-3 text-primary">@item.Nombre</h5>
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="me-auto">
+                                        <span class="badge bg-light text-dark border border-secondary">
+                                            <i class="fas fa-cubes me-1"></i>@item.CantidadaDisponible disponibles
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid gap-2">
+                                    <a href="@Url.Action("AnadirCarrito", "Carrito", new { id = item.IdProducto })"
+                                       class="btn btn-success d-flex align-items-center justify-content-center">
+                                        <i class="fas fa-shopping-cart me-2"></i>Añadir al Carrito
+                                    </a>
+                                    <div class="d-flex gap-2">
+                                        <a href="@Url.Action("Details", "Productoes", new { id = item.IdProducto })"
+                                           class="btn btn-outline-primary flex-grow-1 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-info-circle me-1"></i>Detalles
+                                        </a>
+                                        <a href="@Url.Action("Create", "Reseñas", new { idProducto = item.IdProducto })"
+                                           class="btn btn-outline-info flex-grow-1 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-comment me-1"></i>Reseña
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
     </div>
-</main>
+</div>
+
+<style>
+    .product-card {
+        transition: all 0.3s ease;
+    }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+    .hover-shadow:hover {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+
+    .transition-all {
+        transition: all 0.3s ease;
+    }
+</style>

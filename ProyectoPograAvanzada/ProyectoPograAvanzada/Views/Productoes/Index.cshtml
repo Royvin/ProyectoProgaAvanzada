@@ -50,7 +50,7 @@
                                 {
                                     <tr class="border-bottom">
                                         <td class="py-3 fw-bold">@Html.DisplayFor(modelItem => item.Nombre)</td>
-                                        <td class="py-3">$@Html.DisplayFor(modelItem => item.Precio)</td>
+                                        <td class="py-3">₡@Html.DisplayFor(modelItem => item.Precio)</td>
                                         <td class="py-3">
                                             <span class="badge bg-primary rounded-pill">
                                                 @Html.DisplayFor(modelItem => item.CantidadaDisponible) unidades
@@ -66,14 +66,6 @@
                                                 </a>
                                                 <a href="@Url.Action("Delete", "Productoes", new { id = item.IdProducto })" class="btn btn-danger btn-sm">
                                                     <i class="fas fa-trash-alt me-1"></i>Eliminar
-                                                </a>
-                                            </div>
-                                            <div class="mt-2">
-                                                <a href="@Url.Action("AnadirCarrito", "Carrito", new { id = item.IdProducto })" class="btn btn-success btn-sm">
-                                                    <i class="fas fa-shopping-cart me-1"></i>Añadir al Carrito
-                                                </a>
-                                                <a href="@Url.Action("Create", "Reseñas", new { idProducto = item.IdProducto })" class="btn btn-info btn-sm text-white">
-                                                    <i class="fas fa-comment me-1"></i>Añadir Reseña
                                                 </a>
                                             </div>
                                         </td>

@@ -23,14 +23,17 @@
                         @Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, new { @class = "nav-link px-3" })
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink("Productos", "Index", "Productoes", new { area = "" }, new { @class = "nav-link px-3" })
-                    </li>
-                    <li class="nav-item">
                         @Html.ActionLink("Carrito", "Index", "Carrito", new { area = "" }, new { @class = "nav-link px-3" })
                     </li>
                     <li class="nav-item">
                         @Html.ActionLink("Pedidos", "Index", "Pedidos", new { area = "" }, new { @class = "nav-link px-3" })
                     </li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item">
+                            @Html.ActionLink("Administrar Productos", "Index", "Productoes", new { area = "" }, new { @class = "nav-link px-3" })
+                        </li>
+                    }
                 </ul>
                 <div class="d-flex">
                     @Html.Partial("_LoginPartial")

@@ -33,7 +33,7 @@ namespace ProyectoPograAvanzada.Controllers
             if (producto.CantidadaDisponible <= 0)
             {
                 TempData["Error"] = $"No hay stock disponible para el producto: {producto.Nombre}";
-                return RedirectToAction("Index", "Productoes");
+                return RedirectToAction("Index", "Home");
             }
 
             // Obtener o crear un carrito para el usuario actual
@@ -47,7 +47,7 @@ namespace ProyectoPograAvanzada.Controllers
                 if (carritoItem.Cantidad + 1 > producto.CantidadaDisponible)
                 {
                     TempData["Error"] = $"No hay suficiente stock para {producto.Nombre}. Stock disponible: {producto.CantidadaDisponible}";
-                    return RedirectToAction("Index", "Productoes");
+                    return RedirectToAction("Index", "Home");
                 }
 
                 carritoItem.Cantidad++;
@@ -70,7 +70,7 @@ namespace ProyectoPograAvanzada.Controllers
 
             // Añadir mensaje de confirmación
             TempData["Message"] = $"¡{producto.Nombre} ha sido añadido al carrito!";
-            return RedirectToAction("Index", "Productoes");
+            return RedirectToAction("Index", "Home");
         }
 
         public ActionResult EliminarDeCarrito(int id)
