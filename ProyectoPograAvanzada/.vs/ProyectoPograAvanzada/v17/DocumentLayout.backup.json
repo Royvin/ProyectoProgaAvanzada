@@ -1,13 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\royam\\Desktop\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\",
+  "WorkspaceRootPath": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|c:\\users\\royam\\desktop\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\migrations\\202504161743506_implementacionidusuarioencarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\migrations\\202504161743506_implementacionidusuarioencarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|d:\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|c:\\users\\royam\\desktop\\programacion avanzada\\proyectoprogaavanzada\\proyectopograavanzada\\proyectopograavanzada\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\proyectopograavanzada\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CA02F7CF-2775-4C00-8949-CA2A1926639D}|ProyectoPograAvanzada\\ProyectoPograAvanzada.csproj|solutionrelative:proyectopograavanzada\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -18,8 +26,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 55,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "202504161743506_implementacionIDUsuarioenCarrito.cs",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Migrations\\202504161743506_implementacionIDUsuarioenCarrito.cs",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Migrations\\202504161743506_implementacionIDUsuarioenCarrito.cs",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Migrations\\202504161743506_implementacionIDUsuarioenCarrito.cs",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Migrations\\202504161743506_implementacionIDUsuarioenCarrito.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T21:30:40.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Web.config",
+              "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Web.config",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Web.config",
+              "RelativeToolTip": "ProyectoPograAvanzada\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-04-21T21:27:37.523Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:12:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
@@ -242,29 +276,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\royam\\Desktop\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\User\\Index.cshtml",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\User\\Index.cshtml",
               "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Views\\User\\Index.cshtml",
-              "ToolTip": "C:\\Users\\royam\\Desktop\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\User\\Index.cshtml",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\User\\Index.cshtml",
               "RelativeToolTip": "ProyectoPograAvanzada\\Views\\User\\Index.cshtml",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAG8AAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAG8AAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-17T20:05:16.256Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\royam\\Desktop\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\User\\Edit.cshtml",
+              "DocumentMoniker": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\User\\Edit.cshtml",
               "RelativeDocumentMoniker": "ProyectoPograAvanzada\\Views\\User\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\royam\\Desktop\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\User\\Edit.cshtml",
+              "ToolTip": "D:\\PROGRAMACION AVANZADA\\ProyectoProgaAvanzada\\ProyectoPograAvanzada\\ProyectoPograAvanzada\\Views\\User\\Edit.cshtml",
               "RelativeToolTip": "ProyectoPograAvanzada\\Views\\User\\Edit.cshtml",
               "ViewState": "AgIAAE4AAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-17T20:05:05.234Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T20:05:05.234Z"
             }
           ]
         },
